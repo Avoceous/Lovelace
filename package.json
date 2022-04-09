@@ -2,8 +2,8 @@
   "name": "com.lovelace.allencasul",
   "displayName": "Lovelace",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "main": "index.js",
+  "description": "A lightweight mobile app user interface",
+  "main": "lovelaceWidget.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
