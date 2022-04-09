@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <meta name="theme-color" content="#097dd6">
+        <link rel="stylesheet" href="css/lovelace.widget.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/edcb04481e.js"></script>
+        <script src="js/jQuery.js"></script>
+        <title>Lovelace</title>
+    </head>
+    <body>
+        <div class="appBarContainer">
+            <div class="appBarContents">
+                <i id="bar" class="fal fa-bars" onclick="showDrawer()"></i>
+                <i id="search" class="fal fa-search"></i>
+                <p id="title">Lovelace</p>
+            </div>
+        </div>
+       <div id="floatingActionButton" onclick="clickCounter()">+</div>
+        <div class="clickCounterWrapper">
+            <div class="clickCounterContents">
+                <p id="text">A flexible hybrid mobile app UI.</p>
+                <p id="clickValue">0</p>
+            </div>
+        </div>
+        <div class="bottomBarContainer">
+            <div class="bottomBarContents">
+                <div class="homeWrapper">
+                    <i id="homeIcon" class="fal fa-home-alt"></i>
+                    <p class="homeText">Home</p>
+                </div>
+                 <div class="searchWrapper">
+                    <i id="searchIcon" class="fal fa-search"></i>
+                    <p id="searchText">Search</p>
+                </div>
+               <div class="messageWrapper">
+                    <i id="messageIcon" class="fal fa-comments-alt"></i>
+                    <p id="messageText">Message</p>
+               </div>
+               <div class="profileWrapper">
+                    <i id="profileIcon" class="fal fa-user"></i></li>
+                    <p id="profileText">Profile</p>
+               </div>
+            </div>
+        </div>
+        <div id="drawerSideBar">
+            <div id="drawerHead">
+                <i id="backArrow" class="fal fa-arrow-left" onclick="hideDrawer()"></i>
+                <p id="drawerTitle">Back</p>
+                <div class="drawerContents">
+                    <div class="profilePhoto">
+                        <img class="profile" src="img/profile.jpg" alt="Profile">
+                        <div class="heading-container">
+                            <div class="main-text">Allen Casul</div>
+                            <div class="description">Software Developer</div><hr class="line">
+                            <ul>
+                                <a class="option" href="#"><li><i id="icon" class="fal fa-sign-in"></i> Log In</li></a><br>
+                                <a class="option" href="#"><li><i id="icon" class="fal fa-trophy-alt"></i> Services</li></a><br>
+                                <a class="option" href="#"><li><i id="icon" class="fal fa-mobile-android"></i> Contact</li></a><br>
+                                <a class="option" href="#"><li><i id="icon" class="fal fa-share-alt"></i> Share</li></a><br>
+                                <a class="option" href="#"><li><i id="icon" class="fal fa-cog"></i> Settings</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="darkTransparentContainer" class="darkTransparentContainer">
+            <div id="exitPopup">
+                <h3>Confirmation</h3>
+                <h4>Oops! do you want to close this app?</h4>
+                <hr id="horizontalLine">
+                <button id="closePopup">Cancel</button>
+                <button id="exitApp">Yes</button>
+            </div>
+        </div>
+    </body>
+    <script src="js/lovelaceWidget.js"></script>
+</html>
