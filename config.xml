@@ -9,7 +9,7 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <preference name="StatusBarOverlaysWebView" value="true"/>
-    <preference name="StatusBarBackgroundColor" value="#097dd6"/>
+    <preference name="StatusBarBackgroundColor" value="#7135DB"/>
     <preference name="StatusBarStyle" value="lightcontent"/>
     <access origin="*"/>
     <access origin="http://*"/>

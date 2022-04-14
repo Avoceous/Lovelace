@@ -6,9 +6,10 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
-        <meta name="theme-color" content="#097dd6">
+        <meta name="theme-color" content="#7135DB">
         <link rel="stylesheet" href="css/lovelace.widget.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/lovelace.fonts.css">
+        <link rel="stylesheet" href="css/lovelace.style.css">
         <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -16,50 +17,64 @@
         <script src="js/jQuery.js"></script>
         <title>Lovelace</title>
     </head>
-    <body>
+    <body id="mainBody">
         <div class="appBarContainer">
             <div class="appBarContents">
-                <i id="bar" class="fal fa-bars" onclick="showDrawer()"></i>
-                <i id="search" class="fal fa-search"></i>
-                <p id="title">Lovelace</p>
+                <i id="bar" class="fal fa-align-left" onclick="showDrawer()"></i>
+                <i id="audio" class="fal fa-microphone"></i>
+                <p id="appTitle">Lovelace</p>
+                <div class="appBarSelection">
+                    <div class="selectedContainer">
+                        <p id="selected" class="selection">Dashboard</p>
+                        <hr id="hightlight">
+                    </div>
+                    <p class="selection">Activity</p>
+                    <p class="selection">Progress</p>
+                </div>
             </div>
         </div>
-       <div id="floatingActionButton" onclick="clickCounter()">+</div>
         <div class="clickCounterWrapper">
             <div class="clickCounterContents">
-                <p id="text">A flexible hybrid mobile app UI.</p>
+                <p id="bodyText">A flexible ready made mobile app UI.</p>
                 <p id="clickValue">0</p>
             </div>
         </div>
-        <div class="bottomBarContainer">
-            <div class="bottomBarContents">
-                <div class="homeWrapper">
-                    <i id="homeIcon" class="fal fa-home-alt"></i>
-                    <p class="homeText">Home</p>
+        <div id="graphicContainer">
+            <img id="graphic" src="./img/web-illustration.png">
+        </div>
+        <div class="bottomNavigationBarWrapper">
+            <div class="bottomNavigationBarContainer">
+                <div class="bottomNavigationBarContents">
+                    <div id="floatingActionButton" onclick="clickCounter()">+</div>
+                    <div class="bottomIconContainer">
+                        <i id="homeIcon" class="fas fa-home-lg-alt"></i>
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <i id="messageIcon" class="fas fa-comment"></i>
+                        <i id="profileIcon" class="fas fa-user"></i></li>
+                    </div>
                 </div>
-                 <div class="searchWrapper">
-                    <i id="searchIcon" class="fal fa-search"></i>
-                    <p id="searchText">Search</p>
-                </div>
-               <div class="messageWrapper">
-                    <i id="messageIcon" class="fal fa-comments-alt"></i>
-                    <p id="messageText">Message</p>
-               </div>
-               <div class="profileWrapper">
-                    <i id="profileIcon" class="fal fa-user"></i></li>
-                    <p id="profileText">Profile</p>
-               </div>
             </div>
         </div>
+        <div id="searchTransparentBackground"></div>
+        <div id="searchBarContainer">
+            <i id="searchBackArrow" class="fal fa-arrow-left" onclick="hideSearch()"></i>
+            <div class="searchBarContents">
+                <form action="#" method="get">
+                    <input id="searchInput" type="text" placeholder="Search here..." autocomplete="off">
+                    <button id="searchBtn"><i id="searchFormIcon" class="fal fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div id="drawerTransparentBackground"></div>
         <div id="drawerSideBar">
             <div id="drawerHead">
                 <i id="backArrow" class="fal fa-arrow-left" onclick="hideDrawer()"></i>
-                <p id="drawerTitle">Back</p>
+                <p id="drawerTitle">Settings</p>
                 <div class="drawerContents">
                     <div class="profilePhoto">
                         <img class="profile" src="img/profile.jpg" alt="Profile">
                         <div class="heading-container">
-                            <div class="main-text">Allen Casul</div>
+                            <div class="main-text">Allen Charls Casul</div>
                             <div class="description">Software Developer</div><hr class="line">
                             <ul>
                                 <a class="option" href="#"><li><i id="icon" class="fal fa-sign-in"></i> Log In</li></a><br>
@@ -73,6 +88,11 @@
                 </div>
             </div>
         </div>
+        <div class="loaderContainer">
+            <div id="loaderAnimation">
+                <img id="loader" src="./gif/preloader.gif" alt="loading...">
+            </div>
+        </div>
         <div id="darkTransparentContainer" class="darkTransparentContainer">
             <div id="exitPopup">
                 <h3>Confirmation</h3>
@@ -83,5 +103,29 @@
             </div>
         </div>
     </body>
+    <script>
+        //Quit App Function
+        function onDeviceReady(){
+            document.addEventListener('backbutton', onBackButton, false);
+        }
+        function onBackButton(){
+            darkTransparentContainer = document.getElementById('darkTransparentContainer');
+            closePopup = document.getElementById('closePopup');
+            exitApp = document.getElementById('exitApp');
+            darkTransparentContainer.classList.add('display');
+            closePopup.addEventListener('click', function(){
+                darkTransparentContainer.classList.remove('display');
+            });
+            exitApp.addEventListener('click', function(){
+                darkTransparentContainer.classList.remove('display');
+                setTimeout(function(){
+                    navigator.app.exitApp();
+                },500);
+            });
+        }
+        document.addEventListener('deviceready', function(){
+            onDeviceReady();
+        });
+    </script>
     <script src="js/lovelaceWidget.js"></script>
 </html>

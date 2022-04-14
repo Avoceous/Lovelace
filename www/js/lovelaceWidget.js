@@ -1,24 +1,6 @@
-//Quit App Function
-function onDeviceReady(){
-    document.addEventListener('backbutton', onBackButton, false);
-}
-function onBackButton(){
-    darkTransparentContainer = document.getElementById('darkTransparentContainer');
-    closePopup = document.getElementById('closePopup');
-    exitApp = document.getElementById('exitApp');
-    darkTransparentContainer.classList.add('show');
-    closePopup.addEventListener('click', function(){
-        darkTransparentContainer.classList.remove('show');
-    });
-    exitApp.addEventListener('click', function(){
-        darkTransparentContainer.classList.remove('show');
-        setTimeout(function(){
-            navigator.app.exitApp();
-        },500);
-    });
-}
-document.addEventListener('deviceready', function(){
-    onDeviceReady();
+//Loading Animation
+$(window).on('load', function(){
+    $('.loaderContainer').fadeOut(1500);
 });
 //Drawer Function
 function showDrawer(){
@@ -33,3 +15,38 @@ function clickCounter(){
     document.getElementById('clickValue').innerText = ++click;
     click = click;
 }
+//Drawer Transparent Background Function
+const showTransparentEffect = document.getElementById ('bar'); 
+showTransparentEffect.addEventListener('click', function(){
+    document.getElementById('drawerTransparentBackground').style.display = 'block';
+});
+const hideTransparentEffect = document.getElementById ('backArrow'); 
+hideTransparentEffect.addEventListener('click', function(){
+    document.getElementById('drawerTransparentBackground').style.display = 'none';
+});
+$(document).ready(function(){
+    $('#drawerTransparentBackground').click(function(){
+        window.location = "./";
+    });
+});
+//Search Transparent Background Function
+const showSearchTransparentEffect = document.getElementById ('searchIcon'); 
+showSearchTransparentEffect.addEventListener('click', function(){
+    document.getElementById('searchTransparentBackground').style.display = 'block';
+    document.getElementById('searchBarContainer').style.display = 'block';
+});
+const hideSearchTransparentEffect = document.getElementById ('searchBackArrow'); 
+hideSearchTransparentEffect.addEventListener('click', function(){
+    document.getElementById('searchBarContainer').style.display = 'none';
+    document.getElementById('searchTransparentBackground').style.display = 'none';
+});
+const hideSearchTransparentEffectWhenTapped = document.getElementById ('searchTransparentBackground'); 
+hideSearchTransparentEffectWhenTapped.addEventListener('click', function(){
+    document.getElementById('searchBarContainer').style.display = 'none';
+    document.getElementById('searchTransparentBackground').style.display = 'none';
+});
+//Redirect Function
+let homeRedirect = document.getElementById('homeIcon');
+homeRedirect.addEventListener('click', function(){
+    window.location.href = './';
+});

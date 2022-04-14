@@ -1,28 +1,46 @@
- /*Fonts & Icons*/
- /*https://fontawesome.com/v5*/
+ /*Icons https://fontawesome.com/v5/search*/
+ /*Google Fonts*/ 
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-/*Main UI Widget*/ 
+/*Loading Animation*/ 
+.loaderContainer {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+#loaderAnimation {
+    display: flex;
+    justify-content: center;
+    margin-top: 232px;
+}
+#loader {
+    width: 225px;
+}
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
     color: black;
+    font-family: 'Questrial', sans-serif;
 }
- /*Main Body*/
+ /*App Body*/
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background: #f3f3f3;
-    font-family: 'Questrial', sans-serif;
+    background: #f4f4f4;
 }
 /*App Bar*/
 .appBarContainer {
     position: fixed;
-    top: 0; left: 0; 
-    width: 100%; height: 88px;
-    background: #0987e7;
-    box-shadow: 1px 2px 6px rgb(220, 220, 220);
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 132px;
+    background-image: linear-gradient(to right, #944CE1, #7135DB);
+    box-shadow: 1px 2px 16px #bfbfbf;
 }
-/*App Bar Contents*/
 .appBarContents {
     margin-top: 22px;
     font-size: 21px;
@@ -30,44 +48,66 @@ body {
     padding: 25px;
 }
 #bar {
-    float: left; color: #ffffff;
+    float: left; 
+    color: #ffffff;
     cursor: pointer;
 }
-#search {
-    float: right; color: #ffffff;
+#audio {
+    float: right; 
+    color: #ffffff;
     font-size: 21px;
     cursor: pointer;
 }
-#title {
-    position: absolute;
-    margin-top: 1.5px;
-    margin-left: 45px;
+#appTitle {
+    text-align: center;
+    margin-top: 1.4px;
     font-size: 20px;
-    font-family: 'Questrial', sans-serif;
     color: #ffffff;
 }
+.appBarSelection {
+    display: flex;
+    justify-content: center;
+    margin-top: -5px;
+}
+.appBarSelection .selection {
+    font-size: 16px;
+    color: #ffffffaf;
+    margin: 20px;
+    cursor: pointer;
+}.selection:hover {
+    color: white;
+    transition: .4s;
+}
+#selected {
+    color: #ffffff;
+}
+#hightlight {
+    text-align: center;
+    margin-top: -14px;
+    border-radius: 100px;
+    width: 40px;  
+    border: 1px solid rgb(255, 255, 255);
+} 
  /*Floating Action Button*/
 #floatingActionButton {
-    display: block;
+    position: absolute;
     width: 58px;
     height: 58px;
-    background: #0987e7;
+    background: #7837e8;
     display: flex;
-    border-radius: 50%;
-    font-size: 21px;
-    color: #ffffff;
-    text-decoration: none;
     align-items: center;
     justify-content: center;
-    box-shadow: 1px 2px 8px rgb(192, 192, 192);
-    position: fixed;
-    transition: 0.25s;
-    margin-left: 76%;
-    margin-top: 138%;
+    border-radius: 50%;
+    font-size: 26px;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 1px 2px 16px #5c2caf;
     cursor: pointer;
+    transition: 0.25s;
+    margin-top: -30px;
 }
 #floatingActionButton:active {
-    background:#0987e7c9;
+    background:#7c3aee;
 }
 /*Click Counter*/
 .clickCounterWrapper {
@@ -79,7 +119,7 @@ body {
     margin-top: 300px;
     color: rgb(39, 39, 39); 
 }
-#text {
+#bodyText {
     text-transform: none;
     font-size: 14px;
 }
@@ -87,83 +127,66 @@ body {
     font-size: 40px;
     margin-top: -10px;
 }
-/*Bottom Bar*/
-.bottomBarContainer {
+/*Bottom Navigation Bar*/
+.bottomNavigationBarWrapper {
     position: fixed;
-    bottom: 0; left: 0; 
-    width: 100%; height: 68px;
-    background: #ffffff;
-    box-shadow: 1px 2px 6px rgb(204, 204, 204);
+    bottom: 2%; 
+    left: 0; 
+    right: 0;
 }
-/*Bottom Bar Contents*/
-.bottomBarContents {
+.bottomNavigationBarContents {
     display: flex;
     justify-content: center;
-    margin-top: -8px;
-    text-transform: none;
-    font-size: 21px;
-    padding: 24px;
-    cursor: pointer;
+    margin: auto;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    width: 98%; 
+    height: 60px;
+    background-image: linear-gradient(to right, #7135DB, #944CE1);
+    box-shadow: 1px 2px 16px rgb(154, 154, 154);
+    border-radius: 50px;
+    font-size: 20px;
 }
-.homeWrapper {
-    text-align: center;
+.bottomIconContainer {
+    margin-top: 0px;
 }
 #homeIcon {
-    color: #0987e7c9;
-}
-#homeIcon:hover {
-    color: #d2d2d2c9; 
-    transition: .2s;
-}
-.homeText {
-    margin-top: 2px;
-    font-size: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 40px;
 }
 #searchIcon {
-    margin-left: 40px;
-}
-#searchIcon:hover {
-    color: #d2d2d2c9; 
-    transition: .2s;
-}
-#searchText {
-    margin-top: 2px;
-    margin-left: 28px;
-    font-size: 12px;
-}
-.messageWrapper {
-    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 40px;
 }
 #messageIcon {
-    margin-left: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 40px;
 }
-#messageIcon:hover {
-    color: #d2d2d2c9; 
-    transition: .2s;
+#profileIcon {
+    color: #ffffff;
+    cursor: pointer;
+    margin: 40px;
 }
-#messageText {
-    margin-top: 2px;
-    margin-left: 28px;
-    font-size: 12px;
-}
-.profileWrapper {
-    text-align: center;
-    margin-left: 20px;
-}
-#profileIcon:hover {
-    color: #d2d2d2c9; 
-    transition: .2s;
-}
-#profileText {
-    margin-top: 2px;
-    font-size: 12px;
+#drawerTransparentBackground {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.523);
+    display: none;
 }
 #drawerSideBar {
     position: fixed;
-    top: 0; left: 0; 
-    width: 100%; height: 100vh;
-    background: rgb(255, 255, 255);
+    top: 0; 
     left: -100%;
+    width: 80%; 
+    height: 100vh;
+    background: rgb(255, 255, 255);
     transition: .5s;
 }
 #drawerSideBar.active {
@@ -171,9 +194,11 @@ body {
 }
 #drawerHead {
     position: absolute;
-    top: 0; left: 0; 
-    width: 100%; height: 88px;
-    background: #097dd6;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 88px;
+    background-image: linear-gradient(to right, #7135DB, #944CE1);
 }
 #backArrow {
     font-size: 21px;
@@ -183,7 +208,7 @@ body {
 }
 #drawerTitle {
     position: absolute;
-    margin-top: -65.6px;
+    margin-top: -66.8px;
     margin-left: 70px;
     font-size: 20px;
     color: white;
@@ -226,52 +251,75 @@ ul {
     font-size: 21px;
     padding-right: 20px;
 }
- /* Mobile View Portrait layout (default) */
-@media screen and (min-width: 320px){
-    #floatingActionButton {
-        margin-left: 74%;
-        margin-top: 130%;
-    }
-    #text {
-        font-size: 16px;
-    }
-    #clickValue {
-        font-size: 42px;
-    }
-    .profile {
-        margin-top: -10px;
-    }
-    .main-text {
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .description {   
-        font-size: 14px;
-    }
-    .option {
-        font-size: 18px;
-        margin: 10px;
-    }
-    ul {
-        list-style: none;
-        margin-top: 10px;
-    }
-    #icon {
-        font-size: 18px;
-        padding-right: 20px;
-    }
+ /* Search UI */
+#searchTransparentBackground {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.523);
+    cursor: pointer;
+    display: none;
 }
+#searchBackArrow {
+    font-size: 21px;
+    margin: 47px 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+ #searchBarContainer {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 88px;
+    background-color: #7135DB;
+    display: none;
+}
+.searchBarContents {
+    margin-top: 36px;
+    margin-right: 10px;
+    float: right;
+}
+#searchInput {
+    width: 215px;
+    height: 4px;
+    padding: 19px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #6c33d0;
+    border-radius: 100px;
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.728);
+}
+#searchFormIcon {
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: -67px;
+}
+#searchBtn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+ /* Mobile View Portrait layout (default) */
 @media screen and (min-width: 360px){
-    #floatingActionButton {
-        position: absolute;
-        margin-left: 76%;
-        margin-top: 140%;
+    .main-text {
+        font-weight: normal;
+        font-size: 20px;
     }
-    #text {
+    #bodyText {
         font-size: 16px;
+        margin-top: -26%;
     }
     #clickValue {
         font-size: 42px;
+        margin-top: -3%;
     }
     .profile {
         margin-top: 48px;
@@ -280,42 +328,136 @@ ul {
     .description {
         font-size: 16px;
     }
+    #searchInput {
+        width: 228px;
+    }
+    /*Bottom Navigation Bar*/
+    .bottomNavigationBarWrapper {
+        position: fixed;
+        bottom: 1%; 
+        left: 0; 
+        right: 0;
+    }
+    .bottomNavigationBarContents {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        bottom: 0; 
+        left: 0; 
+        right: 0;
+        width: 99%; 
+        height: 56.8px;
+        background-image: linear-gradient(to right, #7135DB, #944CE1);
+        box-shadow: 1px 2px 16px rgb(154, 154, 154);
+        border-radius: 50px;
+        font-size: 20px;
+    }
+    .bottomIconContainer {
+        margin-top: -12.8px;
+    }
+    #homeIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 32px;
+    }
+    #searchIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 32px;
+    }
+    #messageIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 32px;
+    }
+    #profileIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 32px;
+    }
+    #graphicContainer {
+        text-align: center;
+        margin-top: -10%;
+    }
+    #graphic {
+        width: 320px;
+    }
+}
+@media screen and (min-width: 375px){
+    #searchInput {
+        width: 244px;
+    }
 }
  /* Tablet Portrait View */
 @media screen and (min-width: 768px){
-    #floatingActionButton {
-        margin-left: 80%;
-        margin-top: 105%;
-    }
     #drawerSideBar {
         width: 60%; height: 100vh;
+    }
+    #bodyText {
+        font-size: 18px;
+        margin-top: -6%;
+    }
+    #clickValue {
+        font-size: 50px;
+        margin-top: -1%;
+    }
+    #graphicContainer {
+        text-align: center;
+        margin-top: -4%;
+    }
+    #graphic {
+        width: 460px;
     }
 }
 /* Tablet Landscape View */
 @media screen and (min-width: 1024px){
-    #floatingActionButton {
-        margin-left: 86%;
-        margin-top: 55%;
-    }
     #drawerSideBar {
         width: 40%; height: 100vh;
+    }
+    #bodyText {
+        font-size: 18px;
+        margin-top: -10%;
+    }
+    #clickValue {
+        font-size: 50px;
+        margin-top: -1%;
+    }
+    #graphicContainer {
+        text-align: center;
+        margin-top: -8%;
+    }
+    #graphic {
+        width: 760px;
     }
 }
  /*Standard Screen */
 @media screen and (min-width: 1366px){
-    #floatingActionButton {
-        margin-left: 48.2%;
-        margin-top: 40%;
-    }
     #drawerSideBar {
         width: 20%; height: 100vh;
+    }
+    #bodyText {
+        font-size: 18px;
+        margin-top: -6%;
+    }
+    #clickValue {
+        font-size: 50px;
+        margin-top: -1%;
+    }
+    #graphicContainer {
+        text-align: center;
+        margin-top: -4%;
+    }
+    #graphic {
+        width: 460px;
     }
  }
  /*FHD Screen */
  @media screen and (min-width: 1920px){
-    #floatingActionButton {
-        margin-left: 48.2%;
-        margin-top: 40%;
+    #loaderAnimation {
+        margin-top: 380px;
+    }
+    #floatingActionButton:hover {
+        background:#7035d5;
     }
     #drawerSideBar {
         width: 24%; height: 100vh;
@@ -327,6 +469,7 @@ ul {
     .main-text {
         margin-left: 38px;
         font-size: 26px;
+        font-weight: normal;
     }   
     .description {    
         font-size: 18px;
@@ -340,53 +483,90 @@ ul {
         font-size: 20px;
         padding-right: 20px;
     }
-    #text {
+    #bodyText {
         font-size: 18px;
+        margin-top: 1%;
     }
     #clickValue {
         font-size: 50px;
+        margin-top: -1%;
+    }
+    /* Search UI */
+    .searchBarContents {
+        margin-top: -81px;
+        text-align: center;
+        float: unset;
+    }
+    #searchInput {
+        width: 350px;
+    }
+    /*Bottom Navigation Bar*/
+    .bottomNavigationBarWrapper {
+        position: fixed;
+        bottom: 1%; 
+        left: 0; 
+        right: 0;
+    }
+    .bottomNavigationBarContents {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        bottom: 0; 
+        left: 0; 
+        right: 0;
+        width: 22%; 
+        height: 56.8px;
+        background-image: linear-gradient(to right, #7135DB, #944CE1);
+        box-shadow: 1px 2px 16px rgb(154, 154, 154);
+        border-radius: 50px;
+        font-size: 20px;
+    }
+    .bottomIconContainer {
+        margin-top: -20px;
+    }
+    #homeIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 40px;
+    }
+    #searchIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 40px;
+    }
+    #messageIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 40px;
+    }
+    #profileIcon {
+        color: #ffffff;
+        cursor: pointer;
+        margin: 40px;
+    }
+    #graphicContainer {
+        text-align: center;
+        margin-top: -2%;
+    }
+    #graphic {
+        width: 460px;
     }
  }
  /*Ultra HD Screen */
-@media screen and (min-width: 3840px){
-   #floatingActionButton {
-        margin-left: 49.2%;
-        margin-top: 50%;
-   }
-   #drawerSideBar {
-        width: 10%; height: 100vh;
-    }
-    .profile {
-        width: 80px;
-    }
-    .main-text {
-        margin-left: 38px;
-        font-size: 26px;
-    }   
-    .description {    
-        font-size: 20px;
-    }
-    ul {
-        list-style: none;
-        margin-top: 34px;
-        font-size: 20px;
-    }
-    #icon {
-        font-size: 21px;
-        padding-right: 20px;
-        margin-top: 10px;
-    }
-}
+/* @media screen and (min-width: 3840px){
+} */
 /*Quit App*/
 .darkTransparentContainer {
     position: fixed;
-    top: 0; left: 0; 
-    width: 100%; height: 100vh;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100vh;
     background: #00000067;
     box-shadow: 1px 2px 6px rgb(220, 220, 220);
     display: none;
 }
-#darkTransparentContainer.show {
+#darkTransparentContainer.display {
     display: block;
 }
 #exitPopup {
@@ -439,4 +619,10 @@ h4 {
     border: none;
     font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
     cursor: pointer;
+}
+/*Device's screen not supported*/
+@media screen and (max-width: 320px){
+    * {
+        display: none;
+    }
 }
