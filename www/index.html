@@ -69,20 +69,32 @@
         <div id="drawerSideBar">
             <div id="drawerHead">
                 <i id="backArrow" class="fal fa-arrow-left" onclick="hideDrawer()"></i>
-                <p id="drawerTitle">Settings</p>
+                <p id="drawerTitle">Menu</p>
                 <div class="drawerContents">
+                    <p id="accountText">Account</p>
                     <div class="profilePhoto">
                         <img class="profile" src="img/profile.jpg" alt="Profile">
                         <div class="heading-container">
+                            <div id="profileInfo"><i id="info" class="fa-solid fa-chevron-right"></i></div>
                             <div class="main-text">Allen Charls Casul</div>
-                            <div class="description">Software Developer</div><hr class="line">
-                            <ul>
-                                <a class="option" href="#"><li><i id="icon" class="fal fa-sign-in"></i> Log In</li></a><br>
-                                <a class="option" href="#"><li><i id="icon" class="fal fa-trophy-alt"></i> Services</li></a><br>
-                                <a class="option" href="#"><li><i id="icon" class="fal fa-mobile-android"></i> Contact</li></a><br>
-                                <a class="option" href="#"><li><i id="icon" class="fal fa-share-alt"></i> Share</li></a><br>
-                                <a class="option" href="#"><li><i id="icon" class="fal fa-cog"></i> Settings</li></a>
-                            </ul>
+                            <div class="description">Profile Information</div><hr class="line">
+                        </div>
+                        <p id="settingsText">Settings</p>
+                        <div id="settingsContainer">
+                            <div id="settingsContents">
+                                <i id="shareIcon" class="fal fa-share-alt"></i>
+                                <p id="shareText">Share</p>
+                                <i id="contactIcon" class="fal fa-mobile-android"></i>
+                                <p id="contactText">Contact</p>
+                                <i id="darkThemeIcon" class="fal fa-moon"></i>
+                                <p id="darkThemeText">Dark Mode</p>
+                            </div>
+                            <div id="darkThemeButtonContainer">
+                                <input type="checkbox" class="checkbox" id="theme" />
+                                <label class="label" for="theme">
+                                    <div class="ball"></div>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,39 +105,6 @@
                 <img id="loader" src="./gif/preloader.gif" alt="loading...">
             </div>
         </div>
-        <div id="darkTransparentContainer" class="darkTransparentContainer">
-            <div id="exitPopup">
-                <h3>Confirmation</h3>
-                <h4>Oops! do you want to close this app?</h4>
-                <hr id="horizontalLine">
-                <button id="closePopup">Cancel</button>
-                <button id="exitApp">Yes</button>
-            </div>
-        </div>
     </body>
-    <script>
-        //Quit App Function
-        function onDeviceReady(){
-            document.addEventListener('backbutton', onBackButton, false);
-        }
-        function onBackButton(){
-            darkTransparentContainer = document.getElementById('darkTransparentContainer');
-            closePopup = document.getElementById('closePopup');
-            exitApp = document.getElementById('exitApp');
-            darkTransparentContainer.classList.add('display');
-            closePopup.addEventListener('click', function(){
-                darkTransparentContainer.classList.remove('display');
-            });
-            exitApp.addEventListener('click', function(){
-                darkTransparentContainer.classList.remove('display');
-                setTimeout(function(){
-                    navigator.app.exitApp();
-                },500);
-            });
-        }
-        document.addEventListener('deviceready', function(){
-            onDeviceReady();
-        });
-    </script>
     <script src="js/lovelaceWidget.js"></script>
 </html>
