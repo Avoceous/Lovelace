@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.lovelace.allencasul" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Lovelace</name>
-    <description>Lovelace is a flexible mobile app User Interface.</description>
+    <description>Lovelace is a flexible and elegant mobile app User Interface.</description>
     <author email="charlscasul@gmail.com" href="https://cordova.apache.org">
         Allen Charls Casul
     </author>
