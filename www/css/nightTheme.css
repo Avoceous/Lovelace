@@ -95,6 +95,10 @@ body {
     background: #033E80;
     box-shadow: 1px 2px 16px #002651;
     }
+    #info:hover {
+        background: #034490;
+        transition: .4s;
+    }
 }
 /*FHD Screen */
 @media screen and (min-width: 1920px) {
