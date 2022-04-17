@@ -1,3 +1,1 @@
 # Lovelace
-# Lovelace
-# LovelaceApp
