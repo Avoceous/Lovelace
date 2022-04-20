@@ -4,13 +4,12 @@ body {
 
 .appBarContainer {
     background-image: linear-gradient(to right, #033E80, #031955);
-    box-shadow: 1px 2px 16px #002651;
 }
 
 #floatingActionButton {
     /*Floating Action Button*/
     background: #033E80;
-    box-shadow: 1px 2px 16px #002651;
+    box-shadow: 1px 2px 4px #002651;
 }
 
 #floatingActionButton:active {
@@ -56,7 +55,7 @@ body {
 #info {
     /*Drawer Contents*/
     background: #033E80;
-    box-shadow: 1px 2px 16px #002651;
+    box-shadow: 1px 2px 8px #002651;
     color: #f3f3f3fe;
 }
 

@@ -1,5 +1,5 @@
 @media screen and (min-width: 360px) {
-    /*Mobile Portrait layout (default) */
+    /*Mobile Portrait layout (default) */   
 }
 
 @media screen and (min-width: 375px) {
@@ -28,7 +28,7 @@
 }
 
 @media screen and (max-width: 359px) {
-    /*Below 360px screen will not be supported*/
+    /*Below 360px will not be supported*/
     * {
         display: none;
     }
