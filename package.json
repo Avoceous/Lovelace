@@ -2,8 +2,8 @@
   "name": "com.lovelace.allencasul",
   "displayName": "Lovelace",
   "version": "1.0.0",
-  "description": "A lightweight mobile app user interface",
-  "main": "lovelaceWidget.js",
+  "description": "Lovelace is a supple and stylish hybrid mobile app UI.",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,12 +13,14 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^10.1.1",
+    "cordova-android": "^10.1.2",
     "cordova-plugin-dialogs": "^2.0.2",
     "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-statusbar": "^3.0.0",
-    "cordova-plugin-whitelist": "^1.3.5"
+    "cordova-plugin-whitelist": "^1.3.5",
+    "cordova-plugin-x-socialsharing": "^6.0.3",
+    "es6-promise-plugin": "^4.2.2"
   },
   "cordova": {
     "plugins": {
@@ -26,7 +28,8 @@
       "cordova-plugin-dialogs": {},
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-network-information": {},
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-x-socialsharing": {}
     },
     "platforms": [
       "android"

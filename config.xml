@@ -1,21 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.lovelace.allencasul" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Lovelace</name>
-    <description>Lovelace is a flexible and elegant mobile app User Interface.</description>
-    <author email="charlscasul@gmail.com" href="https://cordova.apache.org">
+    <description>Lovelace is a supple and stylish hybrid mobile app UI.</description>
+    <author email="charlscasul@gmail.com" href="https://www.facebook.com/allencasul">
         Allen Charls Casul
     </author>
+
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
     <preference name="StatusBarOverlaysWebView" value="true"/>
     <preference name="StatusBarBackgroundColor" value="#7135DB"/>
     <preference name="StatusBarStyle" value="lightcontent"/>
+
     <access origin="*"/>
     <access origin="http://*"/>
     <access origin="http://*"/>
     <access origin="https://*"/>
     <access origin="https://*"/>
+
     <platform name="android">
         <allow-intent href="market:*"/>
         <icon src="res/images/ldpi.png" density="ldpi"/>
@@ -25,6 +29,7 @@
         <icon src="res/images/xxhdpi.png" density="xxhdpi"/>
         <icon src="res/images/xxxhdpi.png" density="xxxhdpi"/>
     </platform>
+
     <plugin name="cordova-plugin-statusbar" spec="^2.4.3"/>
     <plugin name="cordova-plugin-whitelist" spec="^1.3.5"/>
 </widget>
