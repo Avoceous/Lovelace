@@ -4,6 +4,7 @@ body {
 
 .appBarContainer {
     background-image: linear-gradient(to right, #033E80, #031955);
+    box-shadow: none;
 }
 
 #floatingActionButton {
