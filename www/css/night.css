@@ -1,0 +1,148 @@
+body {
+    background: #031955;
+}
+
+.appBarContainer {
+    background-image: linear-gradient(to right, #033E80, #031955);
+    box-shadow: 1px 2px 16px #002651;
+}
+
+#floatingActionButton {
+    /*Floating Action Button*/
+    background: #033E80;
+    box-shadow: 1px 2px 16px #002651;
+}
+
+#floatingActionButton:active {
+    background: #034490;
+}
+
+#bodyText {
+    /*Click Counter*/
+    text-transform: none;
+    color: #ffffff;
+}
+
+#clickValue {
+    color: #ffffff;
+}
+
+#drawerSideBar {
+    background: #031955;
+}
+
+#drawerHead {
+    background-image: linear-gradient(to right, #033E80, #031955);
+}
+
+.line {
+    border-color: rgba(188, 188, 188, 0.161);
+}
+
+.main-text {
+    color: rgb(255, 255, 255);
+}
+
+.description {
+    color: #ffffff;
+}
+
+#searchBarContainer {
+    /* Search User Interface */
+    background-image: linear-gradient(to right, #033E80, #031955);
+    box-shadow: none;
+}
+
+#info {
+    /*Drawer Contents*/
+    background: #033E80;
+    box-shadow: 1px 2px 16px #002651;
+    color: #f3f3f3fe;
+}
+
+#accountText {
+    color: #ffffff;
+}
+
+#settingsText {
+    color: #ffffff;
+}
+
+#shareIcon {
+    color: #ffffff;
+}
+
+#shareText {
+    color: #ffffff;
+}
+
+#contactIcon {
+    color: #ffffff;
+}
+
+#contactText {
+    color: #ffffff;
+}
+
+#nightThemeContainer {
+    /*Night Theme Widget*/
+    background: #033E80;
+    box-shadow: 1px 2px 16px #002651;
+}
+
+.fa-moon {
+    margin: 6px;
+    color: #ffffff;
+}
+
+#nightThemeText {
+    color: #ffffff;
+}
+
+.label {
+    background: #ffffff;
+}
+
+.label .ball {
+    background-color: #002651;
+}
+
+@media screen and (min-width: 360px) {
+    /*Mobile Portrait layout (default) */
+    .description {
+        color: #ffffffce;
+    }
+
+    .bottomNavigationBarContents {
+        background: #033E80;
+        box-shadow: 1px 2px 16px #002651;
+    }
+
+    #info:hover {
+        background: #034490;
+        transition: .4s;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    /*FHD Screen */
+    #floatingActionButton:hover {
+        background: #034490;
+    }
+
+    .description {
+        font-size: 18px;
+        color: #ffffffd2;
+    }
+
+    .bottomNavigationBarContents {
+         /* Bottom Navigation Bar*/
+        background: #033E80;
+        box-shadow: 1px 2px 16px #002651;
+    }
+
+    #info:hover {
+        background: #034490;
+        transition: .4s;
+    }
+}
