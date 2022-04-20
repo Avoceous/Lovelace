@@ -1,113 +1,128 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <meta name="theme-color" content="#7135DB">
-        <link rel="stylesheet" href="css/lovelace.widget.css">
-        <link rel="stylesheet" href="css/lovelace.fonts.css">
-        <link rel="stylesheet" href="css/lovelace.style.css">
-        <link rel="stylesheet" href="css/all.css">
-        <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/fontawesome.min.css">
-        <script src="https://kit.fontawesome.com/edcb04481e.js"></script>
-        <script src="js/jQuery.js"></script>
-        <title>Lovelace</title>
-    </head>
-    <body class="mainBody">
-        <div class="appBarContainer">
-            <div class="appBarContents">
-                <i id="bar" class="fal fa-align-left" onclick="showDrawer()"></i>
-                <i id="theme" class="fal fa-moon-cloud"></i>
-                <p id="appTitle">Lovelace</p>
-                <div class="appBarSelection">
-                    <div class="selectedContainer">
-                        <p  id="selected" class="selection">Home</p>
-                        <hr id="hightlight">
-                    </div>
-                    <p class="selection">Search</p>
-                    <p class="selection">Chat</p>
-                    <p class="selection">Profile</p>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <!--Browser Theme-->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#7135DB">
+    <!--App Bar, Drawer, Floating Action Button, Bottom Navigation Bar-->
+    <link rel="stylesheet" href="css/widget.css"> 
+    <!--Your App Style-->
+    <link rel="stylesheet" href="css/style.css"> 
+    <!--App Icons-->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/edcb04481e.js"></script>
+    <!--jQuery Library-->
+    <script src="js/jQuery.js"></script>
+    <title>Lovelace</title>
+</head>
+<body class="mainBody">
+    <!--App Bar-->
+    <div class="appBarContainer">
+        <div class="appBarContents">
+            <i id="bar" class="fal fa-align-left" onclick="showDrawer()"></i>
+            <i id="theme" class="fal fa-moon-cloud"></i>
+            <!--App Title-->
+            <p id="appTitle">Lovelace</p>
+            <div class="appBarSelection">
+                <div class="selectedContainer">
+                    <p id="selected" class="selection">Home</p>
+                    <hr id="hightlight">
+                </div>
+                <p class="selection">Dashboard</p>
+                <p class="selection">Activity</p>
+            </div>
+        </div>
+    </div>
+    <!--App Click Counter-->
+    <div class="clickCounterWrapper">
+        <div class="clickCounterContents">
+            <p id="bodyText">A supple and stylish hybrid mobile app UI.</p>
+            <p id="clickValue">0</p>
+        </div>
+    </div>
+    <div id="graphicContainer"><img id="graphic" src="./img/web-illustration.png"></div>
+    <!--App Bottom Navigation Bar-->
+    <div class="bottomNavigationBarWrapper">
+        <div class="bottomNavigationBarContainer">
+            <div class="bottomNavigationBarContents">
+                <div id="floatingActionButton" onclick="clickCounter()">+</div>
+                <div class="bottomIconContainer">
+                    <i id="homeIcon" class="fas fa-home-lg-alt"></i>
+                    <i id="searchIcon" class="fas fa-search"></i>
+                    <i id="messageIcon" class="fas fa-comment"></i>
+                    <i id="profileIcon" class="fas fa-user"></i></li>
                 </div>
             </div>
         </div>
-        <div class="clickCounterWrapper">
-            <div class="clickCounterContents">
-                <p id="bodyText">A flexible ready made mobile app UI.</p>
-                <p id="clickValue">0</p>
-            </div>
+    </div>
+    <!--App Search-->
+    <div id="searchTransparentBackground"></div>
+    <div id="searchBarContainer">
+        <i id="searchBackArrow" class="fal fa-arrow-left" onclick="hideSearch()"></i>
+        <div class="searchBarContents">
+            <form action="#" method="get">
+                <input id="searchInput" type="text" placeholder="Search here..." autocomplete="off">
+                <button id="searchBtn"><i id="searchFormIcon" class="fal fa-search"></i></button>
+            </form>
         </div>
-        <div id="graphicContainer">
-            <img id="graphic" src="./img/web-illustration.png">
-        </div>
-        <div class="bottomNavigationBarWrapper">
-            <div class="bottomNavigationBarContainer">
-                <div class="bottomNavigationBarContents">
-                    <div id="floatingActionButton" onclick="clickCounter()">+</div>
-                    <div class="bottomIconContainer">
-                        <i id="homeIcon" class="fas fa-home-lg-alt"></i>
-                        <i id="searchIcon" class="fas fa-search"></i>
-                        <i id="messageIcon" class="fas fa-comment"></i>
-                        <i id="profileIcon" class="fas fa-user"></i></li>
+    </div>
+    <!--App Drawer-->
+    <div id="drawerTransparentBackground"></div>
+    <div id="drawerSideBar">
+        <div id="drawerHead">
+            <i id="backArrow" class="fal fa-arrow-left" onclick="hideDrawer()"></i>
+            <p id="drawerTitle">Menu</p>
+            <div class="drawerContents">
+                <p id="accountText">About</p>
+                <div class="profilePhoto">
+                    <img class="profile" src="img/profile.jpg" alt="Profile">
+                    <div class="heading-container">
+                        <div id="profileInfo"><i id="info" class="fal fa-chevron-right"></i></div>
+                        <div class="main-text">Allen Charls Casul</div>
+                        <div class="description">App Developer &copy;</div>
+                        <hr class="line">
                     </div>
-                </div>
-            </div>
-        </div>
-        <div id="searchTransparentBackground"></div>
-        <div id="searchBarContainer">
-            <i id="searchBackArrow" class="fal fa-arrow-left" onclick="hideSearch()"></i>
-            <div class="searchBarContents">
-                <form action="#" method="get">
-                    <input id="searchInput" type="text" placeholder="Search here..." autocomplete="off">
-                    <button id="searchBtn"><i id="searchFormIcon" class="fal fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <div id="drawerTransparentBackground"></div>
-        <div id="drawerSideBar">
-            <div id="drawerHead">
-                <i id="backArrow" class="fal fa-arrow-left" onclick="hideDrawer()"></i>
-                <p id="drawerTitle">Menu</p>
-                <div class="drawerContents">
-                    <p id="accountText">Account</p>
-                    <div class="profilePhoto">
-                        <img class="profile" src="img/profile.jpg" alt="Profile">
-                        <div class="heading-container">
-                            <div id="profileInfo"><i id="info" class="fa-solid fa-chevron-right"></i></div>
-                            <div class="main-text">Allen Charls Casul</div>
-                            <div class="description">Profile Information</div><hr class="line">
+                    <p id="settingsText">Settings</p>
+                    <div id="settingsContainer">
+                        <div id="settingsContents">
+                            <i id="shareIcon" class="fal fa-share-alt"></i>
+                            <p id="shareText">Share</p>
+                            <i id="contactIcon" class="fal fa-mobile-android"></i>
+                            <p id="contactText">Contact</p>
                         </div>
-                        <p id="settingsText">Settings</p>
-                        <div id="settingsContainer">
-                            <div id="settingsContents">
-                                <i id="shareIcon" class="fal fa-share-alt"></i>
-                                <p id="shareText">Share</p>
-                                <i id="contactIcon" class="fal fa-mobile-android"></i>
-                                <p id="contactText">Contact</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="nightThemeTransparentBackground"></div>
-        <div id="nightThemeContainer">
-            <div id="nightThemeContents">
-                <div id="nighThemeSwitch">
-                    <input type="checkbox" class="checkbox" id="nightTheme" onclick="changeStatus()"/>
-                    <label class="label" for="nightTheme">
+    </div>
+    <!--App Night Theme-->
+    <div id="nightThemeTransparentBackground"></div>
+    <div id="nightThemeContainer">
+        <div id="nightThemeContents">
+            <div id="nighThemeSwitch">
+                <input type="checkbox" class="checkbox" id="nightTheme" onclick="changeStatus()" />
+                <label class="label" for="nightTheme">
                     <div class="ball"></div>
                 </label>
-                </div>
-                <div id="nightThemeText"><i class="fal fa-moon"></i> Night Mode</div>
             </div>
+            <div id="nightThemeText"><i class="fal fa-moon"></i> Night Mode</div>
         </div>
-        <div id="loaderContainer">
-            <div id="loaderAnimation"></div>
+    </div>
+    <!--App Loader-->
+    <div id="loaderContainer">
+        <div id="loaderAnimation">
+            <!--You can also put a gif file here for the loading animation-->
         </div>
-    </body>
-    <script src="js/lovelaceWidget.js"></script>
+    </div>
+    <!--App Behavior-->
+    <script src="cordova.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
