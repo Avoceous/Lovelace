@@ -9,7 +9,7 @@ var options = {
 
 let shareText = document.getElementById('shareText');
 shareText.addEventListener('click', () => {
-    window.plugins.socialsharing.shareWithOptions(options, onSuccess);
+    window.plugins.socialsharing.shareWithOptions(options);
 });
 
 let shareIcon = document.getElementById('shareIcon');
@@ -22,7 +22,7 @@ contactText.addEventListener('click', () => {
     window.plugins.socialsharing.shareWithOptions(options);
 });
 
-let contactIcon = document.getElementById('contactText');
+let contactIcon = document.getElementById('contactIcon');
 contactIcon.addEventListener('click', () => {
     window.plugins.socialsharing.shareWithOptions(options);
 });

@@ -96,7 +96,7 @@ hideNightThemeModalWhenTapped.addEventListener('click', () => {
     });
 });
 
-//Night Theme Local Storage
+//Night Theme w/ Local Storage
 const check = document.getElementById("nightTheme")
 if (localStorage.getItem('darkMode') === null) {
     localStorage.setItem('darkMode', "false");
