@@ -86,17 +86,19 @@ body {
 
 #nightThemeContainer {
     /*Night Theme Widget*/
-    background: #033E80;
-    box-shadow: 1px 2px 16px #002651;
+    background: #031955;
+    box-shadow: 1px 2px 16px #020c25aa;
 }
 
 .fa-moon {
     margin: 6px;
     color: #ffffff;
+    font-weight: bold;
 }
 
 #nightThemeText {
     color: #ffffff;
+    font-size: 18px;
 }
 
 .label {
@@ -104,23 +106,29 @@ body {
 }
 
 .label .ball {
-    background-color: #002651;
+    background-color: #031955;
+    box-shadow: 1px 1px 2px #000921bb;
 }
 
-@media screen and (min-width: 360px) {
-    /*Mobile Portrait layout (default) */
-    .description {
-        color: #ffffffce;
-    }
+.bottomNavigationBarContents {
+    /* Bottom Navigation Bar*/
+   background: #033E80;
+   box-shadow: 1px 2px 14px #00234bf0;
+}
 
-    .bottomNavigationBarContents {
-        background: #033E80;
-        box-shadow: 1px 2px 16px #002651;
-    }
+#info:hover {
+    background: #034490;
+    transition: .4s;
+}
 
-    #info:hover {
+#floatingActionButton:active {
+    background: #034490;
+}
+
+@media screen and (min-width: 1366px) {
+    /*FHD Screen */
+    #floatingActionButton:hover {
         background: #034490;
-        transition: .4s;
     }
 }
 
@@ -128,21 +136,5 @@ body {
     /*FHD Screen */
     #floatingActionButton:hover {
         background: #034490;
-    }
-
-    .description {
-        font-size: 18px;
-        color: #ffffffd2;
-    }
-
-    .bottomNavigationBarContents {
-         /* Bottom Navigation Bar*/
-        background: #033E80;
-        box-shadow: 1px 2px 16px #002651;
-    }
-
-    #info:hover {
-        background: #034490;
-        transition: .4s;
     }
 }

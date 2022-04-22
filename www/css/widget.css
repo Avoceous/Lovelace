@@ -12,8 +12,8 @@
 }
 
 #loaderAnimation {
-    height: 32px;
-    width: 32px;
+    height: 30px;
+    width: 30px;
     border: 4px solid #f4f4f4;
     border-top-color: #000e2e;
     position: absolute;
@@ -232,7 +232,8 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(15, 15, 15, 0.523);
+    background: rgba(15, 15, 15, 0.656);
+    cursor: pointer;
     display: none;
 }
 
@@ -406,7 +407,7 @@ body {
     justify-content: center;
     border-radius: 50%;
     font-size: 16px;
-    color: #5c5c5cfe;
+    color: #2e2e2efe;
     text-decoration: none;
     cursor: pointer;
 }
@@ -432,6 +433,7 @@ body {
 
 #shareIcon {
     font-size: 19px;
+    cursor: pointer;
 }
 
 #shareText {
@@ -462,7 +464,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(15, 15, 15, 0.523);
+    background: rgba(15, 15, 15, 0.656);
     display: none;
 }
 
@@ -473,8 +475,8 @@ body {
     width: 240px;
     height: 60px;
     background: #ffffff;
-    box-shadow: 1px 2px 16px #31195b;
-    border-radius: 10px;
+    box-shadow: 1px 2px 16px rgba(12, 12, 12, 0.416);
+    border-radius: 2px;
     display: none;
 }
 
@@ -500,7 +502,8 @@ body {
 }
 
 .label {
-    background-image: linear-gradient(to right, #24206c, #1d1448);
+    /* background-image: linear-gradient(to right, #24206c, #1d1448); */
+    background: #d6d6d6be;
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -515,6 +518,7 @@ body {
 
 .label .ball {
     background-color: #ffffff;
+    box-shadow: 1px 2px 4px rgb(159, 159, 159);
     border-radius: 50%;
     position: absolute;
     margin-left: -6px;
@@ -538,7 +542,7 @@ body {
 @media screen and (min-width: 360px) {
     /*Mobile Portrait layout (default) */
     #loaderAnimation {
-        margin-top: 83%;
+        margin-top: 84%;
     }
 
     #floatingActionButton:active {
@@ -642,7 +646,7 @@ body {
 @media screen and (min-width: 375px) {
     /* Popular Mobile Screen Size */
     #loaderAnimation {
-        margin-top: 84%;
+        margin-top: 85%;
     }
 
     #searchInput {
