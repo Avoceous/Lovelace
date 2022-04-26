@@ -7,22 +7,12 @@ var options = {
     chooserTitle: 'Let your friends try this app', // Android only, you can override the default share sheet title
 };
 
-let shareText = document.getElementById('shareText');
+var shareText = document.getElementById('shareText');
 shareText.addEventListener('click', () => {
     window.plugins.socialsharing.shareWithOptions(options);
 });
 
-let shareIcon = document.getElementById('shareIcon');
+var shareIcon = document.getElementById('shareIcon');
 shareIcon.addEventListener('click', () => {
-    window.plugins.socialsharing.shareWithOptions(options);
-});
-
-let contactText = document.getElementById('contactText');
-contactText.addEventListener('click', () => {
-    window.plugins.socialsharing.shareWithOptions(options);
-});
-
-let contactIcon = document.getElementById('contactIcon');
-contactIcon.addEventListener('click', () => {
     window.plugins.socialsharing.shareWithOptions(options);
 });
