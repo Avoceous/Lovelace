@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     border-radius: 50%;
-    animation: spin .6s infinite linear;
+    animation: spin .8s infinite linear;
 }
 
 @keyframes spin {
@@ -54,7 +54,7 @@ body {
     width: 100%;
     height: 132px;
     background-image: linear-gradient(to right, #944CE1, #7135DB);
-    box-shadow: 1px 2px 4px rgb(178, 178, 178);
+    box-shadow: 1px 2px 4px #b2b2b2;
 }
 
 .appBarContents {
@@ -68,14 +68,6 @@ body {
     float: left;
     color: #ffffff;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 100px;
-    background: #5c2caf33;
-    margin-top: -12px;
 }
 
 #theme {
@@ -83,14 +75,6 @@ body {
     color: #ffffff;
     font-size: 21px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 100px;
-    background: #5c2caf33;
-    margin-top: -12px;
 }
 
 #appTitle {
@@ -100,20 +84,20 @@ body {
     color: #ffffff;
 }
 
-.appBarSelection {
+.appBarActionContainer {
     display: flex;
     justify-content: center;
     margin-top: -5px;
 }
 
-.appBarSelection .selection {
+.appBarActionContainer .action {
     font-size: 16px;
     color: #ffffffaf;
     margin: 20px;
     cursor: pointer;
 }
 
-.selection:hover {
+.action:hover {
     color: white;
     transition: .4s;
 }
@@ -122,7 +106,7 @@ body {
     color: #ffffff;
 }
 
-#hightlight {
+#highlighted {
     text-align: center;
     margin-top: -14px;
     border-radius: 100px;
@@ -146,14 +130,15 @@ body {
     box-shadow: 1px 2px 4px rgb(178, 178, 178);
     cursor: pointer;
     transition: 0.25s;
-    margin-top: -70px;
+    bottom: 2%;
+    right: 4%;
 }
 
 #floatingActionButton:active {
     background: #7c3aee;
 }
 
-.clickCounterWrapper {
+.clickCounterContainer {
     /*Click Counter*/
     overflow-y: hidden;
     overflow-x: hidden;
@@ -175,64 +160,13 @@ body {
     margin-top: -10px;
 }
 
-.bottomNavigationBarWrapper {
-    /*Bottom Navigation Bar*/
-    position: fixed;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-}
-
-.bottomNavigationBarContents {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 98%;
-    height: 60px;
-    background-image: linear-gradient(to right, #7135DB, #944CE1);
-    box-shadow: 1px 2px 4px rgb(154, 154, 154);
-    border-radius: 50px;
-    font-size: 20px;
-}
-
-.bottomIconContainer {
-    margin-top: 0px;
-}
-
-#homeIcon {
-    color: #ffffff;
-    cursor: pointer;
-    margin: -40px;
-}
-
-#searchIcon {
-    color: #ffffff;
-    cursor: pointer;
-    margin: 40px;
-}
-
-#messageIcon {
-    color: #ffffff;
-    cursor: pointer;
-    margin: 40px;
-}
-
-#profileIcon {
-    color: #ffffff;
-    cursor: pointer;
-    margin: 40px;
-}
-
 #drawerTransparentBackground {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(15, 15, 15, 0.656);
+    background: rgba(15, 15, 15, 0.477);
     cursor: pointer;
     display: none;
 }
@@ -241,7 +175,7 @@ body {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 80%;
+    width: 85%;
     height: 100vh;
     background: rgb(255, 255, 255);
     transition: .5s;
@@ -251,36 +185,19 @@ body {
     left: 0;
 }
 
-#drawerHead {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 88px;
-    background-image: linear-gradient(to right, #7135DB, #944CE1);
-}
-
 #backArrow {
     font-size: 21px;
     margin: 47px 24px;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 100px;
-    background: #5c2caf33;
-    margin-top: 34.7px;
 }
 
 #drawerTitle {
     position: absolute;
-    margin-top: -79px;
+    margin-top: -67.5px;
     margin-left: 90px;
     font-size: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .profilePhoto {
@@ -313,79 +230,6 @@ body {
     margin-top: 5px;
     font-size: 17px;
     color: rgb(0, 0, 0);
-}
-
-#searchTransparentBackground {
-    /*Search User Interface*/
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(15, 15, 15, 0.523);
-    cursor: pointer;
-    display: none;
-}
-
-#searchBackArrow {
-    font-size: 21px;
-    margin: 47px 24px;
-    color: #ffffff;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 100px;
-    background: #5c2caf33;
-    margin-top: 34.7px;
-}
-
-#searchBarContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 88px;
-    background-image: linear-gradient(to left, #944CE1, #7235db);
-    box-shadow: 1px 2px 16px #472286;
-    display: none;
-}
-
-.searchBarContents {
-    margin-top: -90px;
-    margin-right: 10px;
-    float: right;
-}
-
-#searchInput {
-    width: 215px;
-    height: 4px;
-    padding: 19px;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    font-size: 18px;
-    background: #7235db36;
-    border-radius: 100px;
-}
-
-::placeholder {
-    color: rgba(255, 255, 255, 0.728);
-}
-
-#searchFormIcon {
-    color: #ffffff;
-    font-size: 16px;
-    margin-left: -67px;
-}
-
-#searchBtn {
-    cursor: pointer;
-    background: none;
-    border: none;
-    outline: none;
 }
 
 #profileInfo {
@@ -443,20 +287,6 @@ body {
     cursor: pointer;
 }
 
-#contactIcon {
-    position: absolute;
-    margin-top: 25px;
-    font-size: 19px;
-}
-
-#contactText {
-    position: absolute;
-    font-size: 19px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-left: 50px;
-}
-
 #nightThemeTransparentBackground {
     /*Night Theme Widget*/
     position: fixed;
@@ -464,7 +294,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(15, 15, 15, 0.656);
+    background: rgba(15, 15, 15, 0.477);
     display: none;
 }
 
@@ -475,7 +305,7 @@ body {
     width: 240px;
     height: 60px;
     background: #ffffff;
-    box-shadow: 1px 2px 16px rgba(12, 12, 12, 0.416);
+    box-shadow: 1px 2px 8px rgba(12, 12, 12, 0.194);
     border-radius: 2px;
     display: none;
 }
@@ -574,61 +404,6 @@ body {
         width: 80px;
     }
 
-    #searchInput {
-        width: 228px;
-    }
-
-    .bottomNavigationBarWrapper {
-        /*Bottom Navigation Bar*/
-        position: fixed;
-        bottom: 1%;
-        left: 0;
-        right: 0;
-    }
-
-    .bottomNavigationBarContents {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 99%;
-        height: 56.8px;
-        background-image: linear-gradient(to right, #7135DB, #944CE1);
-        box-shadow: 1px 2px 16px rgb(154, 154, 154);
-        border-radius: 50px;
-        font-size: 20px;
-    }
-
-    .bottomIconContainer {
-        margin-top: -12.8px;
-    }
-
-    #homeIcon {
-        color: #ffffff;
-        cursor: pointer;
-        margin: 32px;
-    }
-
-    #searchIcon {
-        color: #ffffff;
-        cursor: pointer;
-        margin: 32px;
-    }
-
-    #messageIcon {
-        color: #ffffff;
-        cursor: pointer;
-        margin: 32px;
-    }
-
-    #profileIcon {
-        color: #ffffff;
-        cursor: pointer;
-        margin: 32px;
-    }
-
     #graphicContainer {
         text-align: center;
         margin-top: -10%;
@@ -647,10 +422,6 @@ body {
     /* Popular Mobile Screen Size */
     #loaderAnimation {
         margin-top: 85%;
-    }
-
-    #searchInput {
-        width: 244px;
     }
 }
 
@@ -699,23 +470,6 @@ body {
     #graphic {
         width: 460px;
     }
-
-    .bottomNavigationBarWrapper {
-        /* Bottom Navigation */
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .bottomNavigationBarContents {
-        width: 58%;
-        border-radius: 28px 28px 0px 0px;
-    }
-
-    .bottomIconContainer {
-        margin-top: -11px;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -748,23 +502,6 @@ body {
         width: 760px;
     }
 
-    .bottomNavigationBarWrapper {
-        /* Bottom Navigation Bar*/
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .bottomNavigationBarContents {
-        width: 40%;
-        border-radius: 28px 28px 0px 0px;
-    }
-
-    .bottomIconContainer {
-        margin-top: -11px;
-    }
-
     .drawerContents {
         margin-top: 80px;
     }
@@ -793,23 +530,6 @@ body {
     #clickValue {
         font-size: 50px;
         margin-top: -1%;
-    }
-
-    .bottomNavigationBarWrapper {
-        /* Bottom Navigation Bar*/
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .bottomNavigationBarContents {
-        width: 28%;
-        border-radius: 28px 28px 0px 0px;
-    }
-
-    .bottomIconContainer {
-        margin-top: -11px;
     }
 
     #graphicContainer {
@@ -867,54 +587,6 @@ body {
     #clickValue {
         font-size: 50px;
         margin-top: 1%;
-    }
-
-    .searchBarContents {
-        /* Search User Interface */
-        margin-top: -90px;
-        text-align: center;
-        float: unset;
-    }
-
-    #searchInput {
-        width: 350px;
-    }
-
-    .bottomNavigationBarWrapper {
-         /* Bottom Navigation Bar*/
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .bottomNavigationBarContents {
-        width: 22%;
-        border-radius: 28px 28px 0px 0px;
-    }
-
-    .bottomIconContainer {
-        margin-top: -11px;
-    }
-
-    #homeIcon {
-        color: #ffffff;
-        cursor: pointer;
-    }
-
-    #searchIcon {
-        color: #ffffff;
-        cursor: pointer;
-    }
-
-    #messageIcon {
-        color: #ffffff;
-        cursor: pointer;
-    }
-
-    #profileIcon {
-        color: #ffffff;
-        cursor: pointer;
     }
 
     #graphicContainer {
