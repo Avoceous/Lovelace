@@ -22,9 +22,6 @@
     <title>Lovelace</title>
 </head>
 <body class="mainBody">
-    <div class="myApp">
-        <!--START WRITING HERE-->
-    </div>
     <!--App Bar-->
     <div class="appBarContainer">
         <div class="appBarContents">
@@ -32,47 +29,30 @@
             <i id="theme" class="fal fa-moon-cloud"></i>
             <!--App Title-->
             <p id="appTitle">Lovelace</p>
-            <div class="appBarSelection">
+            <div class="appBarActionContainer">
                 <div class="selectedContainer">
-                    <p id="selected" class="selection">Home</p>
-                    <hr id="hightlight">
+                    <p id="selected" class="action">Home</p>
+                    <hr id="highlighted">
                 </div>
-                <p class="selection">Dashboard</p>
-                <p class="selection">Activity</p>
+                <p class="action">Activity</p>
+                <p class="action">Progress</p>
             </div>
         </div>
     </div>
     <!--App Click Counter-->
-    <div class="clickCounterWrapper">
+    <div class="clickCounterContainer">
         <div class="clickCounterContents">
             <p id="bodyText">A supple and stylish hybrid mobile app UI.</p>
             <p id="clickValue">0</p>
         </div>
     </div>
     <div id="graphicContainer"><img id="graphic" src="./img/web-illustration.png"></div>
+    <!--App Floating Action Button-->
+    <div id="floatingActionButton" onclick="clickCounter()">+</div>
     <!--App Bottom Navigation Bar-->
-    <div class="bottomNavigationBarWrapper">
-        <div class="bottomNavigationBarContainer">
-            <div class="bottomNavigationBarContents">
-                <div id="floatingActionButton" onclick="clickCounter()">+</div>
-                <div class="bottomIconContainer">
-                    <i id="homeIcon" class="fas fa-home-alt"></i>
-                    <i id="searchIcon" class="fal fa-search"></i>
-                    <i id="messageIcon" class="fal fa-comments-alt"></i>
-                    <i id="profileIcon" class="fal fa-user"></i></li>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--App Search-->
-    <div id="searchTransparentBackground"></div>
-    <div id="searchBarContainer">
-        <i id="searchBackArrow" class="fal fa-arrow-left" onclick="hideSearch()"></i>
-        <div class="searchBarContents">
-            <form action="#" method="get">
-                <input id="searchInput" type="text" placeholder="Search here..." autocomplete="off">
-                <button id="searchBtn"><i id="searchFormIcon" class="fal fa-search"></i></button>
-            </form>
+    <div class="bottomNavigationBarContainer">
+        <div class="bottomNavigationBarContents">
+            
         </div>
     </div>
     <!--App Drawer-->
