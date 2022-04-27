@@ -1,7 +1,7 @@
 //Loading Animation
 $(window).on('load', () => {
-    $('#loaderContainer').fadeOut(400);
-    $('.mainBody').fadeIn(400);
+    $('#loaderContainer').fadeOut(600);
+    $('.mainBody').fadeIn(600);
 });
 
 //Click Counter Function
@@ -38,31 +38,6 @@ hideTransparentEffectWhenTapped.addEventListener('click', () => {
     });
 });
 
-//Search Modal Function
-const showSearchTransparentEffectWhenSearchIconClicked = document.getElementById('searchIcon');
-showSearchTransparentEffectWhenSearchIconClicked.addEventListener('click', () => {
-    document.getElementById('searchBarContainer').style.display = 'block';
-    $(document).ready(() => {
-        $('#searchTransparentBackground').fadeIn(100);
-    });
-});
-
-const hideSearchTransparentEffectWhenBackArrowClicked = document.getElementById('searchBackArrow');
-hideSearchTransparentEffectWhenBackArrowClicked.addEventListener('click', () => {
-    $(document).ready(() => {
-        $('#searchTransparentBackground').fadeOut(100);
-        $('#searchBarContainer').fadeOut(100);
-    });
-});
-
-const hideSearchTransparentEffectWhenTapped = document.getElementById('searchTransparentBackground');
-hideSearchTransparentEffectWhenTapped.addEventListener('click', () => {
-    $(document).ready(() => {
-        $('#searchTransparentBackground').fadeOut(100);
-        $('#searchBarContainer').fadeOut(100);
-    });
-});
-
 //Redirect Function
 const info = document.getElementById('info');
 info.addEventListener('click', () => {
@@ -74,7 +49,7 @@ const showNightThemeTransparentEffect = document.getElementById('theme');
 showNightThemeTransparentEffect.addEventListener('click', () => {
     document.getElementById('nightThemeContainer').style.display = 'block';
     $(document).ready(() => {
-        $('#nightThemeTransparentBackground').fadeIn(100);
+        $('#nightThemeTransparentBackground').fadeIn('fast');
     });
 });
 
