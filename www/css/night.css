@@ -1,20 +1,20 @@
 body {
-    background: #031955;
+    background: #02326a;
 }
 
 .appBarContainer {
-    background-image: linear-gradient(to right, #033E80, #031955);
+    background: #033E80;
     box-shadow: none;
 }
 
 #floatingActionButton {
     /*Floating Action Button*/
-    background: #033E80;
+    background: #034490;
     box-shadow: 1px 2px 4px #002651;
 }
 
 #floatingActionButton:active {
-    background: #034490;
+    background: #033E80;
 }
 
 #bodyText {
@@ -28,7 +28,7 @@ body {
 }
 
 #drawerSideBar {
-    background: #031955;
+    background: #033E80;
 }
 
 .line {
@@ -54,7 +54,7 @@ body {
 #info {
     /*Drawer Contents*/
     background: #033E80;
-    box-shadow: 1px 2px 8px #002651;
+    box-shadow: 1px 2px 4px #023063;
     color: #f3f3f3fe;
 }
 
@@ -74,17 +74,9 @@ body {
     color: #ffffff;
 }
 
-#contactIcon {
-    color: #ffffff;
-}
-
-#contactText {
-    color: #ffffff;
-}
-
 #nightThemeContainer {
     /*Night Theme Widget*/
-    background: #031955;
+    background: #033E80;
     box-shadow: 1px 2px 8px #020c2530;
 }
 
@@ -103,7 +95,7 @@ body {
 }
 
 .label .ball {
-    background-color: #031955;
+    background-color: #033E80;
     box-shadow: 1px 1px 2px #0009217e;
 }
 
