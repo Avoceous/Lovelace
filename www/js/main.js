@@ -1,7 +1,7 @@
 //Loading Animation
 $(window).on('load', () => {
-    $('#loaderContainer').fadeOut(600);
-    $('.mainBody').fadeIn(600);
+    $('#loaderContainer').fadeOut(400);
+    $('.mainBody').fadeIn(400);
 });
 
 //Click Counter Function

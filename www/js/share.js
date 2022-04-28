@@ -1,4 +1,3 @@
-//This cordova plugin will allow user to share the app.
 var options = {
     message: 'A supple and stylish hybrid mobile app UI.', // not supported on some apps (Facebook, Instagram)
     subject: 'Lovelace', // fi. for email
