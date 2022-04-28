@@ -7,7 +7,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <!--Browser Theme-->
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#7135DB">
+    <meta name="theme-color" content="#7736e9">
     <!--App Bar, Drawer, Floating Action Button, Bottom Navigation Bar-->
     <link rel="stylesheet" href="css/widget.css"> 
     <!--Your App Style-->
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/edcb04481e.js"></script>
-    <!--jQuery Library-->
+    <!--Javascript Library-->
     <script src="js/jQuery.js"></script>
     <title>Lovelace</title>
 </head>
@@ -29,14 +29,6 @@
             <i id="theme" class="fal fa-moon-cloud"></i>
             <!--App Title-->
             <p id="appTitle">Lovelace</p>
-            <div class="appBarActionContainer">
-                <div class="selectedContainer">
-                    <p id="selected" class="action">Home</p>
-                    <hr id="highlighted">
-                </div>
-                <p class="action">Activity</p>
-                <p class="action">Progress</p>
-            </div>
         </div>
     </div>
     <!--App Click Counter-->
@@ -46,7 +38,6 @@
             <p id="clickValue">0</p>
         </div>
     </div>
-    <div id="graphicContainer"><img id="graphic" src="./img/web-illustration.png"></div>
     <!--App Floating Action Button-->
     <div id="floatingActionButton" onclick="clickCounter()">+</div>
     <!--App Bottom Navigation Bar-->
@@ -60,7 +51,7 @@
     <div id="drawerSideBar">
         <div id="drawerHead">
             <i id="backArrow" class="fal fa-arrow-left" onclick="hideDrawer()"></i>
-            <p id="drawerTitle">Menu</p>
+            <p id="drawerTitle">Back</p>
             <div class="drawerContents">
                 <p id="accountText">About</p>
                 <div class="profilePhoto">
@@ -92,7 +83,7 @@
                     <div class="ball"></div>
                 </label>
             </div>
-            <div id="nightThemeText"><i class="fal fa-moon"></i> Dark Theme</div>
+            <div id="nightThemeText"><i class="fal fa-moon"></i> Night Theme</div>
         </div>
     </div>
     <!--App Loader-->
