@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.lovelace.allencasul" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Lovelace</name>
-    <description>Lovelace is a supple and stylish hybrid mobile app UI.</description>
+    <description>A supple toolkit for building hybrid mobile app UI.</description>
     <author email="charlscasul@gmail.com" href="https://www.facebook.com/allencasul">
         Allen Charls Casul
     </author>
@@ -11,17 +11,16 @@
     <allow-intent href="https://*/*" />
 
     <preference name="StatusBarOverlaysWebView" value="true"/>
-    <preference name="StatusBarBackgroundColor" value="#7736e9"/>
+    <preference name="StatusBarBackgroundColor" value="#000000"/>
     <preference name="StatusBarStyle" value="lightcontent"/>
 
     <preference name="SplashMaintainAspectRatio" value="true"/>
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="2500"/>
     <preference name="ShowSplashScreenSpinner" value="true"/>
-    <preference name="SplashScreenSpinnerColor" value="white"/>
+    <preference name="SplashScreenSpinnerColor" value="#042042"/>
     <preference name="FadeSplashScreen" value="true"/>
-    <preference name="FadeSplashScreenDuration" value="400"/>
-    <preference name="AutoHideSplashScreen" value="true"/>
-    <preference name="SplashShowOnlyFirstTime" value="false"/>
+    <preference name="FadeSplashScreenDuration" value="50"/>
+    <preference name="SplashShowOnlyFirstTime" value="true"/>
 
     <access origin="*"/>
     <access origin="http://*"/>
@@ -39,10 +38,10 @@
         <icon src="res/images/xxxhdpi.png" density="xxxhdpi"/>
         
         <splash src="res/screen/android/hdpi.png" density="hdpi"/>
-        <splash src="res/screen/android/ldpi.png" density="ldpi"/>
+        <!-- <splash src="res/screen/android/ldpi.png" density="ldpi"/>
         <splash src="res/screen/android/mdpi.png" density="mdpi"/>
         <splash src="res/screen/android/xhdpi.png" density="xhdpi"/>
-        <splash src="res/screen/android/xxhdpi.png" density="xxhdpi"/>
+        <splash src="res/screen/android/xxhdpi.png" density="xxhdpi"/> -->
     </platform>
 
     <plugin name="cordova-plugin-statusbar" spec="^2.4.3"/>

@@ -1,1 +1,1 @@
-# A supple and stylish hybrid mobile app UI.
+# A supple toolkit for building hybrid mobile app UI.
