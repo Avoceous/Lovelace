@@ -1,40 +1,37 @@
+/*App bar, Drawer, Floating action button, Bottom navigation and Preloader.*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 #loaderContainer {
     /*Loading Animation*/
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgb(255, 255, 255);
-    cursor: pointer;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(15, 15, 15, 0.904);
+    width: 110px;
+    height: 100px;
+    border-radius: 10px;
 }
 
-#loaderAnimation {
-    height: 30px;
-    width: 30px;
-    border: 4px solid #f4f4f4;
-    border-top-color: #000e2e;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 50%;
-    animation: spin .8s infinite linear;
+#preloader {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
 }
 
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
+#preloaderText {
+    position: relative;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
 }
 
 * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-    color: black;
+    color: #000000;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -43,7 +40,7 @@ body {
     -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
     -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-    background: #f4f4f4;
+    background: #f1f1f1;
 }
 
 .appBarContainer {
@@ -53,8 +50,8 @@ body {
     left: 0;
     width: 100%;
     height: 88px;
-    background: #6c31d2;
-    box-shadow: 1px 2px 4px #b2b2b2;
+    background: #7436E1;
+    box-shadow: 1px 2px 4px rgba(20, 20, 20, 0.274);
 }
 
 .appBarContents {
@@ -78,65 +75,40 @@ body {
 }
 
 #appTitle {
-    margin-top: -1px;
+    margin-top: 0;
     margin-left: 44px;
-    font-size: 20px;
+    font-size: 19px;
     color: #ffffff;
-}
-
-.appBarActionContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: -5px;
-}
-
-.appBarActionContainer .action {
-    font-size: 16px;
-    color: #ffffffaf;
-    margin: 20px;
-    cursor: pointer;
-}
-
-.action:hover {
-    color: white;
-    transition: .4s;
-}
-
-#selected {
-    color: #ffffff;
-}
-
-#highlighted {
-    text-align: center;
-    margin-top: -14px;
-    border-radius: 100px;
-    width: 40px;
-    border: 1px solid rgb(255, 255, 255);
 }
 
 #floatingActionButton {
     /*Floating Action Button*/
-    position: absolute;
+    position: fixed;
     width: 58px;
     height: 58px;
-    background: #6c31d2;
+    background: #7436E1;
+    box-shadow: 1px 2px 4px rgba(20, 20, 20, 0.274);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     font-size: 26px;
-    font-family: serif;
+    font-family: sans-serif;
     color: #ffffff;
     text-decoration: none;
-    box-shadow: 1px 2px 4px rgb(178, 178, 178);
     cursor: pointer;
     transition: 0.25s;
-    bottom: 4%;
-    right: 8%;
+    bottom: 3%;
+    right: 5.6%;
 }
 
 #floatingActionButton:active {
-    background: #7736e9;
+    background: #803bf7;
+}
+
+.fa-redo {
+    color: #ffffff;
+    font-size: 18px;
 }
 
 .clickCounterContainer {
@@ -153,15 +125,16 @@ body {
 }
 
 #bodyText {
+    margin: 0px -60px -15px;
     text-transform: none;
     font-size: 14px;
 }
 
 #clickValue {
-    font-size: 40px;
+    font-size: 36px;
 }
 
-#drawerTransparentBackground {
+#drawerOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -186,109 +159,7 @@ body {
     left: 0;
 }
 
-#backArrow {
-    font-size: 21px;
-    margin: 47px 24px;
-    color: #000000;
-    cursor: pointer;
-}
-
-#drawerTitle {
-    position: absolute;
-    margin-top: -69px;
-    margin-left: 69px;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-}
-
-.profilePhoto {
-    margin-top: -7%;
-}
-
-.profile {
-    margin-left: 38px;
-    width: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.line {
-    border-color: rgba(255, 255, 255, 0.219);
-    margin-top: 20px;
-}
-
-.main-text {
-    margin: 0px 68px 0px;
-    margin-left: 38px;
-    font-size: 20px;
-    font-weight: normal;
-    color: rgb(0, 0, 0);
-    font-family: 'Questrial', sans-serif;
-}
-
-.description {
-    margin-left: 38px;
-    margin-top: 5px;
-    font-size: 17px;
-    color: rgb(0, 0, 0);
-}
-
-#profileInfo {
-    /*Drawer Contents*/
-    position: absolute;
-    padding: 18px;
-    margin-left: 70%;
-    margin-top: -13px;
-}
-
-#info {
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    background: #f4f4f4;
-    box-shadow: 1px 2px 4px #d8d8d8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 16px;
-    color: #2e2e2efe;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#accountText {
-    margin-left: 38px;
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 19px;
-    color: #000000;
-}
-
-#settingsContents {
-    margin: 40px;
-}
-
-#settingsText {
-    margin-left: 38px;
-    margin-top: 40px;
-    font-weight: bold;
-    font-size: 19px;
-}
-
-#shareIcon {
-    font-size: 19px;
-    cursor: pointer;
-}
-
-#shareText {
-    margin-top: -20px;
-    margin-left: 50px;
-    font-size: 19px;
-    cursor: pointer;
-}
-
-#nightThemeTransparentBackground {
+#nightThemeOverlay {
     /*Night Theme Widget*/
     position: fixed;
     top: 0;
@@ -301,9 +172,9 @@ body {
 
 #nightThemeContainer {
     position: fixed;
-    top: 34px;
+    top: 29px;
     right: 5px;
-    width: 240px;
+    width: 200px;
     height: 60px;
     background: #ffffff;
     box-shadow: 1px 2px 8px rgba(12, 12, 12, 0.194);
@@ -313,18 +184,14 @@ body {
 
 #nighThemeSwitch {
     position: absolute;
-    top: 21.6px;
+    top: 21px;
     right: 26px;
 }
 
-.fa-moon {
-    margin: 6px;
-}
-
 #nightThemeText {
-    font-size: 18px;
-    padding: 15px;
-    margin-left: -4px;
+    font-size: 19px;
+    padding: 19.4px;
+    margin-left: -5px;
 }
 
 .checkbox {
@@ -333,7 +200,6 @@ body {
 }
 
 .label {
-    /* background-image: linear-gradient(to right, #24206c, #1d1448); */
     background: #d6d6d6be;
     border-radius: 50px;
     cursor: pointer;
@@ -370,219 +236,9 @@ body {
     transition: .4s;
 }
 
-@media screen and (min-width: 360px) {
-    /*Mobile Portrait layout (default) */
-    #loaderAnimation {
-        margin-top: 84%;
-    }
-
-    #floatingActionButton:active {
-        background: #7736e9;
-    }
-
-    .main-text {
-        font-weight: normal;
-        font-size: 18.4px;
-    }
-
-    .description {
-        font-size: 15.8px;
-        color: rgb(34, 34, 34);
-    }
-
-    .clickCounterContainer {
-        margin-top: 9%;
-    }
-
-    #bodyText {
-        font-size: 16px;
-        margin: 0px -60px 0px;
-    }
-
-    #clickValue {
-        font-size: 42px;
-        margin-top: 2%;
-    }
-
-    .profile {
-        margin-top: 48px;
-        width: 80px;
-    }
-}
-
-@media screen and (min-width: 375px) {
-    /* Popular Mobile Screen Size */
-    #loaderAnimation {
-        margin-top: 88%;
-    }
-}
-
-@media screen and (min-width: 640px) {
-    /* Mobile Landscape View */
-    /* Loader Animation Landscape View */
-    #loaderAnimation {
-        margin-top: 25%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    /* Tablet Portrait View */
-    #loaderAnimation {
-        margin-top: 64%;
-    }
-
+/*Desktop Approach*/
+@media (min-width: 1024px){
     #drawerSideBar {
-        width: 60%;
-        height: 100vh;
-    }
-
-    .drawerContents {
-        margin-top: 100px;
-    }
-
-    #accountText {
-        margin: 35px 40px;
-    }
-
-    .clickCounterContainer {
-        margin-top: unset;
-    }
-
-    #bodyText {
-        font-size: 18px;
-    }
-
-    #clickValue {
-        font-size: 50px;
-        margin-top: unset;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    /* Tablet Landscape View */
-    #loaderAnimation {
-        margin-top: 34.8%;
-    }
-
-    #drawerSideBar {
-        width: 40%;
-        height: 100vh;
-    }
-
-    .clickCounterContainer {
-        margin-top: unset;
-    }
-
-    #bodyText {
-        font-size: 18px;
-    }
-
-    #clickValue {
-        font-size: 50px;
-        margin-top: unset;
-    }
-
-    .drawerContents {
-        margin-top: 80px;
-    }
-}
-
-@media screen and (min-width: 1366px) {
-    /*Standard Screen */
-    #loaderAnimation {
-        margin-top: 26.5%;
-    }
-
-    #drawerSideBar {
-        width: 26%;
-        height: 100vh;
-    }
-
-    .drawerContents {
-        margin-top: 80px;
-    }
-
-    .clickCounterContainer {
-        margin-top: unset;
-    }
-
-    #bodyText {
-        font-size: 18px;
-    }
-
-    #clickValue {
-        font-size: 50px;
-        margin-top: unset;
-    }
-
-    .profile {
-        margin-top: 34px;
-        width: 80px;
-    }
-
-    .main-text {
-        margin: 0px 88px 0px;
-        margin-left: 38px;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    /* FHD Screen */
-    #loaderAnimation {
-        margin-top: 22%;
-    }
-
-    #floatingActionButton:hover {
-        background: #7736e9;
-    }
-
-    #drawerSideBar {
-        width: 24%;
-        height: 100vh;
-    }
-
-    .profile {
-        margin-top: 34px;
-        width: 80px;
-    }
-
-    .main-text {
-        margin: 0px 88px 0px;
-        margin-left: 38px;
-        font-size: 26px;
-        font-weight: normal;
-    }
-
-    .description {
-        font-size: 18px;
-        color: rgb(34, 34, 34);
-    }
-
-    .clickCounterContainer {
-        margin-top: unset;
-    }
-
-    #bodyText {
-        font-size: 18px;
-    }
-
-    #clickValue {
-        font-size: 50px;
-        margin-top: unset;
-    }
-
-    .drawerContents {
-        margin-top: 100px;
-    }
-
-    #accountText {
-        margin: 40px 40px;
-    }
-}
-
-@media screen and (max-width: 359px) {
-     /* Below 360px will not be supported*/
-    * {
-        display: none;
+        width: 25%;
     }
 }

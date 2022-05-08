@@ -1,20 +1,24 @@
 body {
-    background: #02326a;
+    background: #021d3a;
+}
+
+#preloaderText {
+    color: #ffffffea;
 }
 
 .appBarContainer {
-    background: #033E80;
-    box-shadow: none;
+    background: #042042;
 }
 
 #floatingActionButton {
     /*Floating Action Button*/
-    background: #034490;
-    box-shadow: 1px 2px 4px #002651;
+    background: #033E80;
+    color: #ffffff;
+    box-shadow: none;
 }
 
 #floatingActionButton:active {
-    background: #033E80;
+    background: #034490;
 }
 
 #bodyText {
@@ -23,107 +27,44 @@ body {
     color: #ffffff;
 }
 
+#drawerSideBar {
+    background: #021d3a;
+}
+
 #clickValue {
     color: #ffffff;
 }
 
-#drawerSideBar {
-    background: #033E80;
-}
-
-.line {
-    border-color: rgba(188, 188, 188, 0.161);
-}
-
-#backArrow {
-    color: #ffffff;
-}
-
-#drawerTitle {
-    color: #ffffff;
-}
-
-.main-text {
-    color: rgb(255, 255, 255);
-}
-
-.description {
-    color: #ffffff;
-}
-
-#info {
-    /*Drawer Contents*/
-    background: #033E80;
-    box-shadow: 1px 2px 4px #023063;
-    color: #f3f3f3fe;
-}
-
-#accountText {
-    color: #ffffff;
-}
-
-#settingsText {
-    color: #ffffff;
-}
-
-#shareIcon {
-    color: #ffffff;
-}
-
-#shareText {
-    color: #ffffff;
-}
-
-#nightThemeContainer {
-    /*Night Theme Widget*/
-    background: #033E80;
-    box-shadow: 1px 2px 8px #020c2530;
-}
-
-.fa-moon {
-    margin: 6px;
-    color: #ffffff;
-}
-
 #nightThemeText {
-    color: #ffffff;
-    font-size: 18px;
+    font-size: 19px;
+    padding: 19.4px;
+    margin-left: -5px;
 }
 
 .label {
-    background: #ffffff;
+    background: #042042;
 }
 
 .label .ball {
-    background-color: #033E80;
+    background-color: #ffffff;
     box-shadow: 1px 1px 2px #0009217e;
 }
 
-.bottomNavigationBarContents {
-    /* Bottom Navigation Bar*/
-   background: #033E80;
-   box-shadow: 1px 2px 14px #00234bf0;
-}
+.wrapper .box {
+    background: #052b58;
+}  
 
-#info:hover {
-    background: #034490;
-    transition: .4s;
-}
+.wrapper .text {
+    color: #ffffffd8;
+}  
 
-#floatingActionButton:active {
-    background: #034490;
-}
+/*Desktop Approach*/
+@media (min-width: 1024px){
+    .wrapper .box {
+        background: #052b58;
+    }  
 
-@media screen and (min-width: 1366px) {
-    /*FHD Screen */
-    #floatingActionButton:hover {
-        background: #034490;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    /*FHD Screen */
-    #floatingActionButton:hover {
-        background: #034490;
-    }
+    .wrapper .text {
+        color: #ffffffd8;
+    }  
 }

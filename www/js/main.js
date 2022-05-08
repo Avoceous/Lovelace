@@ -1,72 +1,50 @@
 //Loading Animation
 $(window).on('load', () => {
-    $('#loaderContainer').fadeOut(400);
-    $('.mainBody').fadeIn(400);
+    $('#loaderContainer').fadeOut('fast');
+    $('#mainBody').fadeIn('fast');
 });
 
-//Click Counter Function
-let click = 0;
-function clickCounter() {
-    document.getElementById('clickValue').innerText = ++click;
-    click = click;
-}
+const floatingBtn = document.getElementById('floatingActionButton');
+floatingBtn.addEventListener('click', () =>{
+    window.location = './';
+});
 
-//Toggle Function
-function showDrawer() {
+//Drawer Function
+const showDrawer = document.getElementById('bar');
+const hideDrawer = document.getElementById('drawerOverlay');
+
+showDrawer.addEventListener('click', () => {
     document.getElementById('drawerSideBar').classList.toggle('active');
-}
+    $('#drawerOverlay').fadeIn('fast');
+});
 
-function hideDrawer() {
+hideDrawer.addEventListener('click', () => {
     document.getElementById('drawerSideBar').classList.toggle('active');
-}
-
-//Side Bar Function
-const showTransparentEffectWhenBarIconClicked = document.getElementById('bar');
-showTransparentEffectWhenBarIconClicked.addEventListener('click', () => {
-    document.getElementById('drawerTransparentBackground').style.display = 'block';
+    $('#drawerOverlay').fadeOut('fast');
 });
-
-const hideTransparentEffectWhenBackArrowCliked = document.getElementById('backArrow');
-hideTransparentEffectWhenBackArrowCliked.addEventListener('click', () => {
-    document.getElementById('drawerTransparentBackground').style.display = 'none';
-});
-
-const hideTransparentEffectWhenTapped = document.getElementById('drawerTransparentBackground');
-hideTransparentEffectWhenTapped.addEventListener('click', () => {
-    $(document).ready(() => {
-        window.location = "./";
-    });
-});
-
-//Redirect Function
-const info = document.getElementById('info');
-info.addEventListener('click', () => {
-    window.location.href = 'https://www.facebook.com/allencasul';
-});
-
+    
 //Night Theme Function
-const showNightThemeTransparentEffect = document.getElementById('theme');
-showNightThemeTransparentEffect.addEventListener('click', () => {
-    document.getElementById('nightThemeContainer').style.display = 'block';
-    $(document).ready(() => {
-        $('#nightThemeTransparentBackground').fadeIn('fast');
-    });
+const showTheme = document.getElementById('theme');
+const hideTheme = document.getElementById('nightThemeOverlay');
+
+showTheme.addEventListener('click', () => {
+    $('#nightThemeOverlay').fadeIn('fast');
+    $('#nightThemeContainer').fadeIn('fast');
 });
 
-const hideNightThemeModalWhenTapped = document.getElementById('nightThemeTransparentBackground');
-hideNightThemeModalWhenTapped.addEventListener('click', () => {
-    $(document).ready(() => {
-        $('#nightThemeTransparentBackground').fadeOut(100);
-        $('#nightThemeContainer').fadeOut(100);
-    });
+hideTheme.addEventListener('click', () => {
+    $('#nightThemeOverlay').fadeOut('fast');
+    $('#nightThemeContainer').fadeOut('fast');
 });
 
-//Night Theme w/ Local Storage
-const check = document.getElementById("nightTheme")
+//Night Theme Local Storage
+const check = document.getElementById("nightTheme");
+const link = document.createElement('link');
+
 if (localStorage.getItem('darkMode') === null) {
     localStorage.setItem('darkMode', "false");
 }
-const link = document.createElement('link');
+
 link.rel = 'stylesheet';
 document.getElementsByTagName('HEAD')[0].appendChild(link);
 
@@ -90,4 +68,4 @@ function checkStatus() {
         check.checked = false;
         link.href = '';
     }
-}checkStatus();
+} checkStatus();

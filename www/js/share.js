@@ -3,7 +3,7 @@ var options = {
     subject: 'Lovelace', // fi. for email
     files: ['', ''], // an array of filenames either locally or remotely
     url: 'https://github.com/softDev28/Lovelace',
-    chooserTitle: 'Let your friends try this app', // Android only, you can override the default share sheet title
+    chooserTitle: 'Share this app', // Android only, you can override the default share sheet title
 };
 
 var shareText = document.getElementById('shareText');

@@ -2,95 +2,93 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <!--Browser Theme-->
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#7736e9">
-    <!--App Bar, Drawer, Floating Action Button, Bottom Navigation Bar-->
+    <meta name="theme-color" content="#4073B6">
     <link rel="stylesheet" href="css/widget.css"> 
-    <!--Your App Style-->
     <link rel="stylesheet" href="css/style.css"> 
-    <!--App Icons-->
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/icon.css">
     <script src="https://kit.fontawesome.com/edcb04481e.js"></script>
-    <!--Javascript Library-->
     <script src="js/jQuery.js"></script>
     <title>Lovelace</title>
 </head>
-<body class="mainBody">
+<body id="mainBody">
+     <!--A sample content | just remove this content and replace it with your creativity-->
+    <div class="videoContainer">
+        <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jtnpnmxQVcE?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="box">
+            <p class="text">Lovelace is a supple toolkit for building hybrid mobile app UI.</p>
+        </div>
+        <div class="box">
+            <p class="text">This is an example of a fully responsive content you can make. Take note that this is a hybrid app or a web based app using only html, css and javascript.</p>
+        </div>
+        <div class="box">
+            <p class="text">How it became android/ios app?. Great question, html & css cannot be loaded directly into a mobile device, it needs some framework, in this case we used Apache Cordova as a wrapper for all the contents including javascript. It has a web view which means what you see in a normal browser is the same as what you've seen in this screen.</p>
+        </div>
+        <div class="box">
+            <p class="text">Why Apache Cordova? why not using Ionic, React Native or even the most popular framework nowadays like Flutter? Wonderful question simply it's because Apache Cordova is a mature framework and still maintained by the cordova community, but what matters the most is its learning curve where you can utilize your web development skills and learn everything from it from a short period of time. By using Apache Cordova you will be able to create a mobile app within a few minutes because the documentation is highly organized and precised. Since it's a cross platform framework you can also build a desktop and a windows phone app.</p>
+        </div>
+        <div class="box">
+            <p class="text">How about its functionalites? can it perform like a native android java app or a native ios swift app? That's a terrific question. We will not lie to ourselves hybrid mobile app is quite different from a native mobile app it has pros & cons, hybrid app may result in a slower performance specially when its not fully optimized, unlike a native app like java or swift its speed is absolutely fast because it uses heavy optimzation, the source code will be compiled into a native code by using C/C++ programming language for example. But Apache Cordova can be your best friend it helps you understand how a native app works because community developers build their own javascript native plugins to be use in a cordova app such as accessing device camera, file manager, location, status bar, splash screen and a lot more which can make your Cordova app close enough to a native mobile application. Overall its up to the developer how he/she manage the code to make it even more cleaner and make the app smoother when its already performing. The app you're going to build depends on your creativity as well as a supple/flexible code will always matters because it also helps your hybrid app run smoother again the lighter the app the faster it can perform or in other words less is more & less is power.</p>
+        </div>
+        <div class="box">
+            <p class="text">In summary I built Lovelace to make your productivity even more easier so that you can save a lot of time re-inventing the wheel such as a basic app bar, drawer, floating action button, bottom navigation bar even a night mode feature to your app. I also installed some plugins for you, such as splash screen, status bar, social sharing, dialogs, network information if you want your app to run only when there's an internet and even in app browser plugin if you want to convert your website into a mobile app. You just have to do some simple configuration and remove something which you think unnecessary to you.</p>
+        </div>
+        <div class="box">
+            <p class="text">How can I create my very own android/ios app using Lovelace? Simple,<br><br>First open your terminal if you're using windows then use cmd and paste this command, git clone https://github.com/softDev28/Lovelace and click enter.<br><br>Second create your first cordova app and navigate the cordova app you created. <br><br>Third, Delete the www folder and replace it with the www folder located in the Lovelace folder.<br><br>Fourth, open config.xml located in the Lovelace folder and copy the code starting from the name tag until plugin tag, don't include the widget tag.<br><br>Fifth if you don't have Apache Cordova installed in your computer make sure to open Lovelace folder and open guide.txt for further instruction about the installation of Apache Cordova Framework.<br><br>If you're all set just run the command cordova platform add android/ios to tell the framework which platform you want to achieve.<br><br>Lastly the compilation process, just run this command cordova run, build or emulate android.<br><br> Its time to test the app now in your own phone and publish it in google playstore or in the app store.</p>
+        </div>
+    </div>
     <!--App Bar-->
     <div class="appBarContainer">
         <div class="appBarContents">
-            <i id="bar" class="fal fa-align-left" onclick="showDrawer()"></i>
+            <i id="bar" class="fal fa-bars"></i>
             <i id="theme" class="fal fa-moon-cloud"></i>
             <!--App Title-->
             <p id="appTitle">Lovelace</p>
         </div>
     </div>
-    <!--App Click Counter-->
-    <div class="clickCounterContainer">
-        <div class="clickCounterContents">
-            <p id="bodyText">A supple and stylish hybrid mobile app UI.</p>
-            <p id="clickValue">0</p>
-        </div>
-    </div>
     <!--App Floating Action Button-->
-    <div id="floatingActionButton" onclick="clickCounter()">+</div>
+    <div id="floatingActionButton"><i class="fal fa-redo"></i></div>
     <!--App Bottom Navigation Bar-->
     <div class="bottomNavigationBarContainer">
         <div class="bottomNavigationBarContents">
-            
+            <!--Bottom Navigation Bar Content-->
         </div>
     </div>
     <!--App Drawer-->
-    <div id="drawerTransparentBackground"></div>
+    <div id="drawerOverlay"></div>
     <div id="drawerSideBar">
         <div id="drawerHead">
-            <i id="backArrow" class="fal fa-arrow-left" onclick="hideDrawer()"></i>
-            <p id="drawerTitle">Back</p>
             <div class="drawerContents">
-                <p id="accountText">About</p>
-                <div class="profilePhoto">
-                    <img class="profile" src="img/profile.jpg" alt="Profile">
-                    <div class="heading-container">
-                        <div id="profileInfo"><i id="info" class="fal fa-chevron-right"></i></div>
-                        <div class="main-text">Allen Charls Casul</div>
-                        <div class="description">App Developer &copy;</div>
-                        <hr class="line">
-                    </div>
-                    <p id="settingsText">Settings</p>
-                    <div id="settingsContainer">
-                        <div id="settingsContents">
-                            <i id="shareIcon" class="fal fa-share-alt"></i>
-                            <p id="shareText">Share</p>
-                        </div>
-                    </div>
-                </div>
+                <!--Drawer Contents-->
             </div>
         </div>
     </div>
     <!--App Night Theme-->
-    <div id="nightThemeTransparentBackground"></div>
+    <div id="nightThemeOverlay"></div>
     <div id="nightThemeContainer">
         <div id="nightThemeContents">
             <div id="nighThemeSwitch">
                 <input type="checkbox" class="checkbox" id="nightTheme" onclick="changeStatus()" />
                 <label class="label" for="nightTheme">
-                    <div class="ball"></div>
+                    <div class="ball">
+
+                    </div>
                 </label>
             </div>
-            <div id="nightThemeText"><i class="fal fa-moon"></i> Night Theme</div>
+            <div id="nightThemeText">
+                Night Mode
+            </div>
         </div>
     </div>
     <!--App Loader-->
     <div id="loaderContainer">
-        <div id="loaderAnimation">
-            <!--You can also put a gif file here for the loading animation-->
-        </div>
+        <img id="preloader" src="./gif/preloader-ios.gif" alt="loading...">
+        <p id="preloaderText">Just a sec...</p>
     </div>
     <!--App Behavior-->
     <script src="cordova.js"></script>
