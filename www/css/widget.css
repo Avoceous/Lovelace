@@ -111,29 +111,6 @@ body {
     font-size: 18px;
 }
 
-.clickCounterContainer {
-    /*Click Counter*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.clickCounterContents {
-    text-align: center;
-    color: rgb(39, 39, 39);
-}
-
-#bodyText {
-    margin: 0px -60px -15px;
-    text-transform: none;
-    font-size: 14px;
-}
-
-#clickValue {
-    font-size: 36px;
-}
-
 #drawerOverlay {
     position: fixed;
     top: 0;
