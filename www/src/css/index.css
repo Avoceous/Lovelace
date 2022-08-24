@@ -135,7 +135,7 @@ body {
 
 .fa-plus {
     color: #ffffff;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .bottomNavigationBar {
@@ -160,7 +160,6 @@ body {
 #homeIcon {
     font-size: 19px;
     color: #7436E1;
-    font-weight: bold;
     cursor: pointer;
 }
 
