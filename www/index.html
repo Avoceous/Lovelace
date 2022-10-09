@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./src/css/loader.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="stylesheet" href="./src/css/icon.css" />
+    <script src="./src/js/fontkit.js"></script>
+    <script src="./src/js/jquery.js"></script>
+    <title>Lovelace</title>
+  </head>
+  <body id="mainBody">
+    <div class="videoContainer">
+      <div class="videoWrapper">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/eFPumO10wJY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <!--LOADER-->
+    <div id="overlayWrapper">
+      <div id="skeletonContainer"></div>
+      <div id="loaderBox">
+        <div id="loaderContainer">
+          <div id="loader"></div>
+        </div>
+      </div>
+    </div>
+    <!--APP BAR-->
+    <div class="appBarContainer">
+      <div class="appBarLeftContents">
+        <div class="iconOverlay">
+          <i id="bars" class="fal fa-bars"></i>
+        </div>
+        <p id="appTitle">Lovelace</p>
+      </div>
+      <div class="appBarRightContents">
+        <i id="search" class="fal fa-search"></i>
+      </div>
+    </div>
+    <div id="searchOverlayContainer">
+      <div class="searchInputContainer">
+        <form action="#">
+          <i id="back" class="fal fa-arrow-left"></i>
+          <input type="text" class="searchInput" placeholder="Search here..." />
+          <button id="searchButton" type="submit">
+            <i class="fal fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="searchImageContainer">
+        <img class="searchImage" src="./src/svg/search.svg">
+        <p class="searchImageText">What would you like to search?</p>
+      </div>
+    </div>
+    <!--BOTTOM NAVIGATION BAR-->
+    <div class="bottomNavigationBar">
+      <div class="bottomNavigationBarContents">
+        <div class="iconContainer">
+          <i id="homeIcon" class="fas fa-home-lg-alt"></i>
+          <p id="homeText" class="iconText">Home</p>
+        </div>
+        <div class="iconContainer">
+          <i id="favoritesIcon" class="fal fa-heart"></i>
+          <p id="iconText" class="iconText">Favorites</p>
+        </div>
+        <!--FLOATING ACTION BUTTON-->
+        <div class="iconContainer">
+          <div id="floatingActionButton">
+            <i class="fal fa-plus"></i>
+          </div>
+        </div>
+        <div class="iconContainer">
+          <i id="cartIcon" class="fal fa-cart-shopping"></i>
+          <p class="iconText">Cart</p>
+        </div>
+        <div class="iconContainer">
+          <i id="accountIcon" class="fal fa-user"></i>
+          <p class="iconText">Account</p>
+        </div>
+      </div>
+    </div>
+    <!--SIDE DRAWER-->
+    <div id="drawerOverlay"></div>
+    <div id="drawerSideBar">
+      <div id="drawerHead">
+        <div class="drawerContents">
+          <!--NIGHT THEME-->
+          <div id="nightThemeContainer">
+            <div id="nightThemeContents">
+              <div id="nighThemeSwitch">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  id="nightTheme"
+                  onclick="changeStatus()"
+                />
+                <label class="label" for="nightTheme">
+                  <div class="ball"></div>
+                </label>
+              </div>
+              <div id="nightThemeText">Night Mode</div>
+              <hr class="line" />
+              <br />
+              <div id="sideBarIconContainer">
+                <i id="sideBarShareIcon" class="fal fa-share-alt"></i>
+                <p id="sideBarShareText" class="sideBarIconText">Share</p>
+              </div>
+              <br />
+              <div id="sideBarIconContainer">
+                <i id="sideBarGithubIcon" class="fab fa-github"></i>
+                <p id="sideBarGithubText" class="sideBarIconText">About</p>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/night.js"></script>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
