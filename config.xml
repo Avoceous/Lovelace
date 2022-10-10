@@ -7,15 +7,15 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <preference name="StatusBarOverlaysWebView" value="true"/>
-    <preference name="StatusBarBackgroundColor" value="#000000"/>
+    <preference name="StatusBarBackgroundColor" value="#2488FF"/>
     <preference name="StatusBarStyle" value="lightcontent"/>
     <preference name="SplashMaintainAspectRatio" value="true"/>
     <preference name="SplashScreenDelay" value="2500"/>
-    <preference name="ShowSplashScreenSpinner" value="true"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
     <preference name="SplashScreenSpinnerColor" value="#042042"/>
     <preference name="FadeSplashScreen" value="true"/>
     <preference name="FadeSplashScreenDuration" value="50"/>
-    <preference name="SplashShowOnlyFirstTime" value="true"/>
+    <preference name="SplashShowOnlyFirstTime" value="false"/>
     <access origin="*"/>
     <access origin="http://*"/>
     <access origin="http://*"/>
