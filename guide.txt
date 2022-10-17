@@ -7,7 +7,7 @@ Apache Cordova Framework Requirements:
 4. https://developer.android.com/studio
 5. https://gradle.org/
 5. Configure Environment Variables
-   Wacth the installation process bit.ly/3JX1aXa
+   Watch the installation process bit.ly/3JX1aXa
 
 
 Cordova Commands:
@@ -80,13 +80,13 @@ Splash Screen
 -------------------------------------
 
 Image Sizing Table
-size	portrait	landscape
-ldpi	200x320	    320x200
-mdpi	320x480	    480x320
-hdpi	480x800	    800x480
-xhdpi	720x1280	1280x720
-xxhdpi	960x1600	1600x960
-xxxhdpi	1280x1920	1920x1280
+size	   portrait	landscape
+ldpi	   200x320	320x200
+mdpi	   320x480	480x320
+hdpi	   480x800	800x480
+xhdpi	   720x1280	1280x720
+xxhdpi	   960x1600	1600x960
+xxxhdpi	   1280x1920	1920x1280
 
     <!-- Default -->
     <splash src="res/screen/android/splash-port-hdpi.png" density="hdpi"/>
